@@ -22,6 +22,77 @@
             </nav>
         </div>
     </header>
+    <main class="main-content">
+        <section class="reservation-section">
+            <h2 class="section-title">Reservations</h2>
+            <p class="reservation-info">
+                We accept online reservations for parties up to 7 people. For larger parties, please call us at
+                <strong>08-123 456 78</strong> or email <strong>eat@hospitable.se</strong>.<br>
+                If you have a stroller or a dog with you, please let us know when booking so we can ensure there is
+                space at the table.<br>
+                Welcome!
+            </p>
+
+            <fieldset class="reservation-fieldset">
+                <form action="https://httpbin.org/anything" method="post" class="reservation-form"
+                    id="reservation-form">
+
+                    <label class="form-label">
+                        <span>First Name:</span>
+                        <input type="text" name="first_name" class="form-input" placeholder="First name" required>
+                    </label>
+
+                    <label class="form-label">
+                        <span>Last Name:</span>
+                        <input type="text" name="last_name" class="form-input" placeholder="Last name" required>
+                    </label>
+
+                    <label class="form-label">
+                        <span>Email:</span>
+                        <input type="email" name="email" class="form-input" placeholder="name@email.com"
+                            pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                    </label>
+
+                    <label class="form-label">
+                        <span>Date:</span>
+                        <input type="date" name="date" class="form-input" required>
+                    </label>
+
+                    <label class="form-label">
+                        <span>Number of people:</span>
+                        <select name="people" class="form-select" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                        </select>
+                    </label>
+
+                    <label class="form-label">
+                        <span>Lunch or Dinner:</span>
+                        <select name="time" class="form-select" required>
+                            <option value="" disabled selected>Select</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                        </select>
+                    </label>
+
+                    <button type="submit" class="btn-primary">Book Now</button>
+                </form>
+            </fieldset>
+
+            <p class="confirmation-message hidden" id="confirmation-message">
+                Thank you for your reservation! Your booking confirmation has been sent to your email address.
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>By: F Henriques 2025</p>
+    </footer>
 </body>
 
 </html>
