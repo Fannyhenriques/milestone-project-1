@@ -105,7 +105,7 @@ nav {
     justify-content: center;
     gap: 4rem;
     align-items: center;
-    max-width: 80%;
+    max-width: 90%;
     margin: 5rem auto 0;
 
 }
@@ -121,10 +121,9 @@ nav {
 
 .intro-img {
     flex: 1;
-    max-width: 40%;
+    max-width: 35%;
     height: 450px;
     object-fit: cover;
-    border-radius: 0.3rem;
 }
 
 .intro--reverse {
