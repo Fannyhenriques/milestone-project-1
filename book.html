@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Hospitable Stockholm</title>
+    <link rel="stylesheet" href="/assets/style/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Bebas+Neue&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Encode+Sans:wght@100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Hepta+Slab:wght@1..900&family=Indie+Flower&family=Julius+Sans+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Racing+Sans+One&family=Varela&family=Vast+Shadow&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="layout-wrapper-header">
+            <h1><span class="logo-accent">hospi</span>TABLE</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="events.html">Events</a>
+                <a class="navlink-res" href="reservations.html">Reservations</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <fieldset class="reservation-fieldset">
+            <form action="https://httpbin.org/anything" method="post" class="reservation-form" id="reservation-form">
+
+                <label class="form-label">
+                    <span>First Name:</span>
+                    <input type="text" name="first_name" class="form-input" placeholder="First name" required>
+                </label>
+
+                <label class="form-label">
+                    <span>Last Name:</span>
+                    <input type="text" name="last_name" class="form-input" placeholder="Last name" required>
+                </label>
+
+                <label class="form-label">
+                    <span>Email:</span>
+                    <input type="email" name="email" class="form-input" placeholder="name@email.com"
+                        pattern="[^@\s]+@[^@\s]+\.[^@\s]+" required>
+                </label>
+
+                <label class="form-label">
+                    <span>Date:</span>
+                    <input type="date" name="date" class="form-input" required>
+                </label>
+
+                <label class="form-label">
+                    <span>Number of people:</span>
+                    <select name="people" class="form-select" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                    </select>
+                </label>
+
+                <label class="form-label">
+                    <span>Lunch or Dinner:</span>
+                    <select name="time" class="form-select" required>
+                        <option value="" disabled selected>Select</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                    </select>
+                </label>
+
+                <button type="submit" class="btn-primary">Book Now</button>
+            </form>
+        </fieldset>
+
+        <p class="confirmation-message hidden" id="confirmation-message">
+            Thank you for your reservation! Your booking confirmation has been sent to your email address.
+        </p>
+        </section>
+    </main>
+</body>
+
+</html>
