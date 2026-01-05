@@ -24,8 +24,13 @@ header {
 }
 
 h1 {
-    font-size: 2.5rem;
+    /* font-size: 2.5rem;
+    font-weight: 300; */
+    color: var(--color-secondary);
+    font-size: 2.2rem;
     font-weight: 300;
+    line-height: 1.6;
+    text-align: center;
 }
 
 h2 {
@@ -81,6 +86,11 @@ nav {
     gap: 1rem;
 }
 
+.logo {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
 .logo-accent {
     font-size: 2.25rem;
 }
@@ -89,14 +99,14 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 3rem;
+    padding: 0.5rem 3rem;
     border-bottom: 1px solid var(--color-primary);
 }
 
 .hero-container {
     position: relative;
     width: 100%;
-    max-height: 60vh;
+    max-height: 80vh;
     overflow: hidden;
 }
 
@@ -115,6 +125,17 @@ nav {
     height: 100%;
     object-fit: cover;
     display: block;
+    object-position: bottom center;
+}
+
+.hero-buttons {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 1rem;
 }
 
 .intro {
@@ -187,16 +208,20 @@ button {
     font-family: 'Hepta Slab', serif;
 }
 
+.reservation-btn {
+    margin: 4rem;
+}
+
 .content-box {
     margin: 0 auto;
     text-align: center;
-    max-width: 80%;
+    max-width: 70%;
     padding: 2rem;
 }
 
 .content-box img {
-    max-width: 80%;
-    height: auto;
+    max-width: 100%;
+    height: 60vh;
     padding-top: 4rem;
 }
 
@@ -218,6 +243,7 @@ button {
 .contact-info address {
     display: flex;
     flex-direction: column;
+    margin: 0;
 }
 
 .contact-info address p {
@@ -237,6 +263,7 @@ button {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    line-height: 1.6;
 }
 
 .hours-table {
@@ -327,6 +354,7 @@ button {
     overflow: hidden;
     object-fit: cover;
     display: block;
+    margin-bottom: 5rem;
 }
 
 .menu-item {
