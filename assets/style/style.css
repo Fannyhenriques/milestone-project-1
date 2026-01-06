@@ -226,12 +226,11 @@ button {
 }
 
 .contact-layout {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: minmax(400px, 1fr) minmax(400px, 1fr);
     gap: 3rem;
-    max-width: 1400px;
-    justify-self: center;
+    max-width: 800px;
+    margin: 2rem auto 0 auto;
 }
 
 .contact-info,
@@ -281,7 +280,8 @@ button {
     grid-column: span 2;
     text-align: center;
     display: block;
-    width: 100%;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 .contact-map .map-iframe {
