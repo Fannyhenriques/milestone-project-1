@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
     /* base color   */
     --color-background: rgb(12, 12, 12);
@@ -8,221 +10,219 @@
     --color-secondary-hover: rgba(255, 255, 255, 0.885);
 }
 
-body {
-    font-family: 'Hepta Slab', serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--color-background);
-    color: var(--color-primary);
-}
+@layer base {
+    body {
+        font-family: 'Hepta Slab', serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--color-background);
+        color: var(--color-primary);
+    }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: var(--color-background);
-}
+    h1,
+    h2,
+    h3,
+    p {
+        color: var(--color-secondary);
+        line-height: 1.6;
+    }
 
-h1 {
-    /* font-size: 2.5rem;
-    font-weight: 300; */
-    color: var(--color-secondary);
-    font-size: 2.2rem;
-    font-weight: 300;
-    line-height: 1.6;
-    text-align: center;
-}
+    h1 {
+        /* font-size: 2.5rem;
+        font-weight: 300; */
+        font-size: 2.2rem;
+        font-weight: 300;
+        text-align: center;
+    }
 
-h2 {
-    color: var(--color-secondary);
-    font-size: 2rem;
-    font-weight: 200;
-    line-height: 1.6;
-}
+    h2 {
+        font-size: 2rem;
+        font-weight: 200;
+    }
 
-h3 {
-    font-size: 1.5rem;
-    font-weight: 100;
-    line-height: 1.6;
-}
+    h3 {
+        font-size: 1.5rem;
+        font-weight: 100;
+    }
 
-p {
-    color: var(--color-secondary);
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.05rem;
-    line-height: 1.6;
-}
+    p {
+        font-size: 1rem;
+        font-weight: 300;
+        letter-spacing: 0.05rem;
+    }
 
-img {
-    max-width: 100%;
-}
+    img {
+        max-width: 100%;
+    }
 
-a {
-    color: var(--color-primary);
-    text-decoration: none;
-    padding: 0.5rem;
-    font-size: 1rem;
+    a {
+        color: var(--color-primary);
+        text-decoration: none;
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
 
 }
 
-nav a {
-    text-transform: uppercase;
+@layer component {
+
+    header {
+        @apply sticky top-0 z-50;
+        background-color: var(--color-background);
+    }
+
+    .layout-wrapper-header {
+        /* mobile */
+        @apply flex justify-between items-center px-6 py-2 border-b;
+        border-color: var(--color-primary);
+        /* tablet */
+        @apply lg:px-6 lg:py-1;
+        /* desktop */
+        @apply xl:px-12 xl:py-1;
+    }
+
+    .logo {
+        @apply text-2xl font-light lg:text-[2rem] xl:text-[2.5rem];
+    }
+
+
+    .logo-accent {
+        @apply text-xl lg:text-2xl xl:text-4xl;
+    }
+
+    nav {
+        @apply hidden flex-col gap-2 w-full lg:flex lg:flex-row lg:gap-4 lg:w-auto;
+    }
+
+    .hamburger {
+        @apply block lg:hidden text-2xl p-2;
+    }
+
+    nav a {
+        @apply text-base uppercase lg:text-[0.9rem] xl:text-lg;
+    }
+
+    nav a:hover {
+        color: var(--color-primary-hover);
+    }
+
+    .navlink-res {
+        @apply border p-2;
+        border-color: var(--color-primary);
+    }
+
+    .navlink-res:hover {
+        border-color: var(--color-primary-hover);
+    }
+
+    .hero-container {
+        @apply relative w-full overflow-hidden max-h-[80vh];
+    }
+
+    .hero-container::after {
+        content: "";
+        @apply absolute top-0 left-0 w-full h-full;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-img {
+        @apply w-full h-full object-cover block object-bottom;
+    }
+
+    .hero-buttons {
+        @apply absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2;
+
+        @apply lg:flex-row lg:gap-4;
+    }
+
+    .intro {
+        display: flex;
+        justify-content: center;
+        gap: 6rem;
+        align-items: center;
+        max-width: 100%;
+        margin: 5rem auto 0;
+
+    }
+
+    .intro-text-container,
+    .intro-img-container {
+        flex: 1;
+    }
+
+    .intro-text {
+        max-width: 30rem;
+    }
+
+    .intro-img {
+        flex: 1;
+        max-width: 35%;
+        height: 500px;
+        object-fit: cover;
+    }
+
+    .intro--reverse {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .btn-container {
+        margin-top: 1rem;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .btn {
+        border: 1px solid var(--color-primary);
+        padding: 1rem;
+        margin: 1rem;
+        display: inline-flex;
+        width: 14rem;
+        justify-content: center;
+        text-transform: uppercase;
+    }
+
+    .btn-primary {
+        color: var(--color-background);
+        background-color: var(--color-primary);
+    }
+
+    .btn-primary:hover {
+        background-color: var(--color-primary-hover);
+    }
+
+    .btn-secondary {
+        background-color: var(--color-background);
+        color: var(--color-primary);
+    }
+
+    .btn-secondary:hover {
+        background-color: var(--color-primary);
+        color: var(--color-background);
+    }
+
+    button {
+        font-family: 'Hepta Slab', serif;
+    }
+
+    .reservation-btn {
+        margin: 4rem;
+    }
+
+    .content-box {
+        margin: 0 auto;
+        text-align: center;
+        max-width: 70%;
+        padding: 2rem;
+    }
+
+    .content-box img {
+        max-width: 100%;
+        height: 60vh;
+        padding-top: 4rem;
+    }
 }
 
-
-nav a:hover {
-    color: var(--color-primary-hover);
-}
-
-.navlink-res {
-    border: 1px solid var(--color-primary);
-    padding: 0.5rem;
-}
-
-nav {
-    display: flex;
-    gap: 1rem;
-}
-
-.logo {
-    font-size: 2.5rem;
-    font-weight: 300;
-}
-
-.logo-accent {
-    font-size: 2.25rem;
-}
-
-.layout-wrapper-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.5rem 3rem;
-    border-bottom: 1px solid var(--color-primary);
-}
-
-.hero-container {
-    position: relative;
-    width: 100%;
-    max-height: 80vh;
-    overflow: hidden;
-}
-
-.hero-container::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    object-position: bottom center;
-}
-
-.hero-buttons {
-    position: absolute;
-    z-index: 1;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
-    gap: 1rem;
-}
-
-.intro {
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    align-items: center;
-    max-width: 100%;
-    margin: 5rem auto 0;
-
-}
-
-.intro-text-container,
-.intro-img-container {
-    flex: 1;
-}
-
-.intro-text {
-    max-width: 30rem;
-}
-
-.intro-img {
-    flex: 1;
-    max-width: 35%;
-    height: 500px;
-    object-fit: cover;
-}
-
-.intro--reverse {
-    display: flex;
-    flex-direction: row-reverse;
-}
-
-.btn-container {
-    margin-top: 1rem;
-    padding: 1rem;
-    text-align: center;
-}
-
-.btn {
-    border: 1px solid var(--color-primary);
-    padding: 1rem;
-    margin: 1rem;
-    display: inline-flex;
-    width: 14rem;
-    justify-content: center;
-    text-transform: uppercase;
-}
-
-.btn-primary {
-    color: var(--color-background);
-    background-color: var(--color-primary);
-}
-
-.btn-primary:hover {
-    background-color: var(--color-primary-hover);
-}
-
-.btn-secondary {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-}
-
-.btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-}
-
-button {
-    font-family: 'Hepta Slab', serif;
-}
-
-.reservation-btn {
-    margin: 4rem;
-}
-
-.content-box {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 70%;
-    padding: 2rem;
-}
-
-.content-box img {
-    max-width: 100%;
-    height: 60vh;
-    padding-top: 4rem;
-}
 
 .contact-layout {
     display: grid;
