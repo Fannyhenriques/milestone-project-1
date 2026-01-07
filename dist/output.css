@@ -7,7 +7,12 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-gray-300: oklch(87.2% 0.01 258.338);
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
     --text-base: 1rem;
     --text-base--line-height: calc(1.5 / 1);
     --text-lg: 1.125rem;
@@ -20,6 +25,9 @@
     --text-4xl--line-height: calc(2.5 / 2.25);
     --font-weight-light: 300;
     --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --tracking-wide: 0.025em;
+    --tracking-wider: 0.05em;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -182,6 +190,27 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
+  .mr-8 {
+    margin-right: calc(var(--spacing) * 8);
+  }
+  .mb-1 {
+    margin-bottom: calc(var(--spacing) * 1);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
+  .mb-6 {
+    margin-bottom: calc(var(--spacing) * 6);
+  }
+  .mb-16 {
+    margin-bottom: calc(var(--spacing) * 16);
+  }
+  .mb-20 {
+    margin-bottom: calc(var(--spacing) * 20);
+  }
+  .block {
+    display: block;
+  }
   .flex {
     display: flex;
   }
@@ -191,20 +220,38 @@
   .table {
     display: table;
   }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
   .h-\[300px\] {
     height: 300px;
+  }
+  .max-h-\[50vh\] {
+    max-height: 50vh;
   }
   .w-full {
     width: 100%;
   }
+  .max-w-\[150px\] {
+    max-width: 150px;
+  }
   .max-w-\[400px\] {
     max-width: 400px;
+  }
+  .max-w-\[600px\] {
+    max-width: 600px;
   }
   .max-w-\[800px\] {
     max-width: 800px;
   }
+  .max-w-\[1000px\] {
+    max-width: 1000px;
+  }
   .max-w-full {
     max-width: 100%;
+  }
+  .flex-2 {
+    flex: 2;
   }
   .border-collapse {
     border-collapse: collapse;
@@ -224,11 +271,33 @@
   .items-start {
     align-items: flex-start;
   }
+  .justify-between {
+    justify-content: space-between;
+  }
   .justify-center {
     justify-content: center;
   }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
+  }
+  .gap-8 {
+    gap: calc(var(--spacing) * 8);
+  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
+  }
+  .space-y-1 {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
+      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
+    }
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -237,12 +306,50 @@
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-0 {
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
+  .border-b {
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+  }
+  .border-gray-300 {
+    border-color: var(--color-gray-300);
+  }
+  .border-white\/10 {
+    border-color: color-mix(in srgb, #fff 10%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
+    }
+  }
+  .object-cover {
+    object-fit: cover;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
   .p-8 {
     padding: calc(var(--spacing) * 8);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .py-6 {
+    padding-block: calc(var(--spacing) * 6);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -253,15 +360,85 @@
   .text-left {
     text-align: left;
   }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
+  }
+  .tracking-\[0\.2rem\] {
+    --tw-tracking: 0.2rem;
+    letter-spacing: 0.2rem;
+  }
+  .tracking-wide {
+    --tw-tracking: var(--tracking-wide);
+    letter-spacing: var(--tracking-wide);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .text-white {
+    color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
   }
   .not-italic {
     font-style: normal;
+  }
+  .opacity-80 {
+    opacity: 80%;
+  }
+  .sm\:flex-row {
+    @media (width >= 40rem) {
+      flex-direction: row;
+    }
+  }
+  .sm\:gap-4 {
+    @media (width >= 40rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:flex-1 {
+    @media (width >= 48rem) {
+      flex: 1;
+    }
+  }
+  .md\:flex-row {
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+  }
+  .md\:items-center {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 4);
+    }
+  }
+  .md\:text-center {
+    @media (width >= 48rem) {
+      text-align: center;
+    }
   }
   .lg\:col-span-2 {
     @media (width >= 64rem) {
@@ -271,6 +448,11 @@
   .lg\:grid-cols-2 {
     @media (width >= 64rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:text-center {
+    @media (width >= 64rem) {
+      text-align: center;
     }
   }
 }
@@ -297,6 +479,7 @@
     font-size: 2.2rem;
     font-weight: 300;
     text-align: center;
+    margin-bottom: 2rem;
   }
   h2 {
     font-size: 2rem;
@@ -542,7 +725,7 @@
   }
   .intro-text {
     max-width: 100%;
-    text-align: center;
+    text-align: left;
     @media (width >= 64rem) {
       max-width: 30rem;
     }
@@ -584,12 +767,8 @@
     margin-inline: auto;
     max-width: 90%;
     padding: calc(var(--spacing) * 8);
-    text-align: left;
     @media (width >= 64rem) {
       max-width: 70%;
-    }
-    @media (width >= 64rem) {
-      text-align: center;
     }
   }
   .content-box img {
@@ -602,112 +781,80 @@
     }
   }
   .footer-layout {
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
-    gap: 3rem;
-    padding: 2rem 7rem;
-    margin-top: 4rem;
-    border-top: 1px solid var(--color-primary);
-    margin-bottom: 1rem;
-  }
-  .footer-layout p {
-    margin: 0;
-  }
-  .footer-contact, .footer-social, .footer-copy {
-    flex: 1;
+    margin-top: calc(var(--spacing) * 16);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    gap: calc(var(--spacing) * 8);
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+    padding-inline: calc(var(--spacing) * 6);
+    padding-top: calc(var(--spacing) * 6);
+    padding-bottom: calc(var(--spacing) * 4);
+    border-color: var(--color-primary);
+    @media (width >= 48rem) {
+      flex-direction: row;
+    }
+    @media (width >= 48rem) {
+      align-items: center;
+    }
+    @media (width >= 48rem) {
+      gap: calc(var(--spacing) * 12);
+    }
+    @media (width >= 48rem) {
+      padding-top: calc(var(--spacing) * 8);
+    }
+    @media (width >= 64rem) {
+      gap: calc(var(--spacing) * 8);
+    }
+    @media (width >= 64rem) {
+      padding-inline: 7rem;
+    }
+    @media (width >= 64rem) {
+      padding-bottom: calc(var(--spacing) * 4);
+    }
+  }
+  .footer-contact, .footer-social, .footer-copy {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
     font-style: normal;
+    @media (width >= 48rem) {
+      align-items: center;
+    }
   }
   .footer-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    --tw-leading: 1.2;
     line-height: 1.2;
+    @media (width >= 48rem) {
+      align-items: center;
+    }
   }
   .footer-contact-content {
     text-align: left;
   }
   .footer-social>div {
+    margin-block: auto;
     display: flex;
-    gap: 2rem;
-    margin-top: auto;
-    margin-bottom: auto;
+    gap: calc(var(--spacing) * 8);
   }
   .footer-social img {
-    margin: 0;
-    max-width: 2rem;
-    filter: invert(100%);
+    max-width: calc(var(--spacing) * 7);
+    --tw-invert: invert(100%);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    margin: calc(var(--spacing) * 0);
+    @media (width >= 64rem) {
+      max-width: calc(var(--spacing) * 8);
+    }
   }
   .footer-social a {
-    padding: 0;
+    padding: calc(var(--spacing) * 0);
   }
-}
-.reservation-form {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-.reservation-fieldset {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 600px;
-  margin: 0 auto;
-  border: none;
-}
-.form-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.form-row label {
-  flex: 1;
-  max-width: 150px;
-}
-.form-row input, .form-row select {
-  flex: 2;
-  font-size: 1rem;
-  padding: 0.5rem;
-}
-.reservation-form button {
-  display: block;
-  margin: 0 auto;
-}
-.menu-section {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
-}
-.menu-section h2 {
-  text-align: center;
-  text-transform: uppercase;
-}
-.menu-section img {
-  width: 100%;
-  max-height: 50vh;
-  overflow: hidden;
-  object-fit: cover;
-  display: block;
-  margin-bottom: 5rem;
-}
-.menu-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
-  padding: 1rem 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-.menu-item-name {
-  text-transform: uppercase;
-}
-.menu-item-description {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-.menu-item-price {
-  margin-right: 2rem;
-  letter-spacing: 0.2rem;
 }
 @property --tw-space-y-reverse {
   syntax: "*";
@@ -720,6 +867,10 @@
   initial-value: solid;
 }
 @property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
   syntax: "*";
   inherits: false;
 }
@@ -738,15 +889,87 @@
   inherits: false;
   initial-value: 0;
 }
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-blur {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-brightness {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-contrast {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-grayscale {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-hue-rotate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-invert {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-opacity {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-saturate {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-sepia {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-drop-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-drop-shadow-size {
+  syntax: "*";
+  inherits: false;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
+      --tw-tracking: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;
+      --tw-leading: initial;
+      --tw-blur: initial;
+      --tw-brightness: initial;
+      --tw-contrast: initial;
+      --tw-grayscale: initial;
+      --tw-hue-rotate: initial;
+      --tw-invert: initial;
+      --tw-opacity: initial;
+      --tw-saturate: initial;
+      --tw-sepia: initial;
+      --tw-drop-shadow: initial;
+      --tw-drop-shadow-color: initial;
+      --tw-drop-shadow-alpha: 100%;
+      --tw-drop-shadow-size: initial;
     }
   }
 }

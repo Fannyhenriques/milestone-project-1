@@ -2,141 +2,143 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Hospitable Stockholm</title>
-    <link rel="stylesheet" href="dist/output.css">
-    <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Hospitable Stockholm</title>
+  <link rel="stylesheet" href="dist/output.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="layout-wrapper-header">
-            <a href="index.html" class="logo">
-                <span class="logo-accent">hospi</span>TABLE
+  <header>
+    <div class="layout-wrapper-header">
+      <a href="index.html" class="logo">
+        <span class="logo-accent">hospi</span>TABLE
+      </a>
+      <button id="hamburger" class="hamburger">
+        &#9776;
+      </button>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="events.html">Events</a>
+        <a class="navlink-res" href="reservations.html">Reservations</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="content-box">
+      <h1>Contact & Opening Hours</h1>
+      <p>
+        We’re located in the heart of old town in Stockholm at Stortorget 2.
+        Please contact us via phone or email for booking or questions.
+      </p>
+    </section>
+    <section class="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-[800px] mx-auto mt-8 justify-center">
+      <section class="contact-info w-full p-8 flex flex-col items-center">
+        <h2>Get in Touch</h2>
+        <address class="flex flex-col space-y-4 not-italic text-primary">
+          <p class="grid grid-cols-[120px_1fr] items-center">
+            <span class="uppercase">Phone:</span>
+            <a href="tel:0812345678">08 - 123 456 78</a>
+          </p>
+          <p class="grid grid-cols-[120px_1fr] items-center">
+            <span class="uppercase">Email:</span>
+            <a href="mailto:eat@hospitable.se">eat@hospitable.se</a>
+          </p>
+          <p class="grid grid-cols-[120px_1fr] items-start">
+            <span class="uppercase">Address:</span>
+            <a href="https://www.google.com/maps?q=Stortorget+2,+111+29+Stockholm" target="_blank"
+              rel="noopener noreferrer">
+              Stortorget 2<br>
+              111 29 Stockholm<br>
+              Sweden
             </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="menu.html">Menu</a>
-                <a href="about.html">About</a>
-                <a href="contact.html">Contact</a>
-                <a href="events.html">Events</a>
-                <a class="navlink-res" href="reservations.html">Reservations</a>
-            </nav>
+          </p>
+        </address>
+      </section>
+      <section class="contact-hours justify-center w-full p-8 flex flex-col items-center text-primary">
+        <h2>Opening Hours</h2>
+        <table class="hours-table w-full max-w-[400px] border-collapse">
+          <thead>
+            <tr class="text-left font-normal">
+              <th class="pl-2">Day</th>
+              <th>Opening Hours</th>
+            </tr>
+          </thead>
+          <tbody class="text-primary">
+            <tr>
+              <td class="pl-2">Monday</td>
+              <td>12:00 PM – 11:00 PM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Tuesday</td>
+              <td>12:00 PM – 11:00 PM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Wednesday</td>
+              <td>12:00 PM – 11:00 PM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Thursday</td>
+              <td>12:00 PM – 1:00 AM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Friday</td>
+              <td>12:00 PM – 1:00 AM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Saturday</td>
+              <td>12:00 PM – 1:00 AM</td>
+            </tr>
+            <tr>
+              <td class="pl-2">Sunday</td>
+              <td>12:00 PM – 9:00 PM</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="contact-map col-span-1 lg:col-span-2 text-center">
+        <h2 class="section-subtitle">Find Us Here</h2>
+        <iframe class="map-iframe w-full max-w-full h-[300px] border-0"
+          src="https://www.google.com/maps?q=Stortorget,+Gamla+Stan,+Stockholm&hl=en&z=16&output=embed" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </section>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-layout">
+      <address class="footer-contact">
+        <div class="footer-contact-content">
+          <p>Stortorget 2<br>111 29 Stockholm</p>
+          <p>Phone: <a href="tel:0812345678">08-123 456 78</a></p>
+          <p>Email: <a href="mailto:eat@hospitable.se">eat@hospitable.se</a></p>
         </div>
-    </header>
-    <main>
-        <section class="content-box">
-            <h1>Contact & Opening Hours</h1>
-            <p>
-                We’re located in the heart of old town in Stockholm at Stortorget 2.
-                Please contact us via phone or email for booking or questions.
-            </p>
-        </section>
-        <section
-            class="contact-layout grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-[800px] mx-auto mt-8 justify-center">
-            <section class="contact-info w-full p-8 flex flex-col items-center">
-                <h2>Get in Touch</h2>
-                <address class="flex flex-col space-y-4 not-italic text-primary">
-                    <p class="grid grid-cols-[120px_1fr] items-center">
-                        <span class="uppercase">Phone:</span>
-                        <a href="tel:0812345678">08 - 123 456 78</a>
-                    </p>
-                    <p class="grid grid-cols-[120px_1fr] items-center">
-                        <span class="uppercase">Email:</span>
-                        <a href="mailto:eat@hospitable.se">eat@hospitable.se</a>
-                    </p>
-                    <p class="grid grid-cols-[120px_1fr] items-start">
-                        <span class="uppercase">Address:</span>
-                        <a href="https://www.google.com/maps?q=Stortorget+2,+111+29+Stockholm" target="_blank"
-                            rel="noopener noreferrer">
-                            Stortorget 2<br>
-                            111 29 Stockholm<br>
-                            Sweden
-                        </a>
-                    </p>
-                </address>
-            </section>
-            <section class="contact-hours justify-center w-full p-8 flex flex-col items-center text-primary">
-                <h2>Opening Hours</h2>
-                <table class="hours-table w-full max-w-[400px] border-collapse">
-                    <thead>
-                        <tr class="text-left font-normal">
-                            <th class="pl-2">Day</th>
-                            <th>Opening Hours</th>
-                        </tr>
-                    </thead>
-                    <tbody class="text-primary">
-                        <tr>
-                            <td class="pl-2">Monday</td>
-                            <td>12:00 PM – 11:00 PM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Tuesday</td>
-                            <td>12:00 PM – 11:00 PM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Wednesday</td>
-                            <td>12:00 PM – 11:00 PM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Thursday</td>
-                            <td>12:00 PM – 1:00 AM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Friday</td>
-                            <td>12:00 PM – 1:00 AM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Saturday</td>
-                            <td>12:00 PM – 1:00 AM</td>
-                        </tr>
-                        <tr>
-                            <td class="pl-2">Sunday</td>
-                            <td>12:00 PM – 9:00 PM</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            <section class="contact-map col-span-1 lg:col-span-2 text-center">
-                <h2 class="section-subtitle">Find Us Here</h2>
-                <iframe class="map-iframe w-full max-w-full h-[300px] border-0"
-                    src="https://www.google.com/maps?q=Stortorget,+Gamla+Stan,+Stockholm&hl=en&z=16&output=embed"
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-            </section>
-        </section>
-    </main>
-    <footer>
-        <div class="footer-layout">
-            <address class="footer-contact">
-                <div class="footer-contact-content">
-                    <p>Stortorget 2<br>111 29 Stockholm</p>
-                    <p>Phone: <a href="tel:0812345678">08-123 456 78</a></p>
-                    <p>Email: <a href="mailto:eat@hospitable.se">eat@hospitable.se</a></p>
-                </div>
-            </address>
-            <div class="footer-social">
-                <div>
-                    <a href="#" aria-label="Instagram">
-                        <img src="assets/images/instagram.png" alt="instagram icon">
-                    </a>
-                    <a href="#" aria-label="Facebook">
-                        <img src="assets/images/facebook-app-symbol.png" alt="facebook icon">
-                    </a>
-                    <a href="#" aria-label="Tripadvisor">
-                        <img src="assets/images/tripadvisor.png" alt="tripadvisor icon">
-                    </a>
-                </div>
-            </div>
-            <div class="footer-copy">
-                <p>
-                    © <br>2026 <br> F. Henriques
-                </p>
-            </div>
+      </address>
+      <div class="footer-social">
+        <div>
+          <a href="#" aria-label="Instagram">
+            <img src="assets/images/instagram.png" alt="instagram icon">
+          </a>
+          <a href="#" aria-label="Facebook">
+            <img src="assets/images/facebook-app-symbol.png" alt="facebook icon">
+          </a>
+          <a href="#" aria-label="Tripadvisor">
+            <img src="assets/images/tripadvisor.png" alt="tripadvisor icon">
+          </a>
         </div>
-    </footer>
+      </div>
+      <div class="footer-copy">
+        <p>
+          © <br>2026 <br> F. Henriques
+        </p>
+      </div>
+    </div>
+  </footer>
 </body>
 
 </html>
