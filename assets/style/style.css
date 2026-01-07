@@ -92,11 +92,13 @@
   }
 
   nav {
-    @apply hidden flex-col gap-2 w-full lg:flex lg:flex-row lg:gap-4 lg:w-auto;
+    @apply hidden flex-col gap-2 w-full transition-all duration-300 ease-in-out;
+    @apply lg:flex lg:flex-row lg:gap-4 lg:w-auto;
+
   }
 
   .hamburger {
-    @apply block lg:hidden text-2xl p-2;
+    @apply block text-2xl p-2 cursor-pointer z-50 lg:hidden;
   }
 
   nav a {
