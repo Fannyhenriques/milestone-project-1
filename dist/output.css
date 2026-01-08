@@ -27,9 +27,6 @@
     --font-weight-medium: 500;
     --tracking-wide: 0.025em;
     --tracking-wider: 0.05em;
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
-    --default-transition-duration: 150ms;
-    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
   }
@@ -192,20 +189,8 @@
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
   }
-  .mr-8 {
-    margin-right: calc(var(--spacing) * 8);
-  }
-  .mb-1 {
-    margin-bottom: calc(var(--spacing) * 1);
-  }
   .mb-2 {
     margin-bottom: calc(var(--spacing) * 2);
-  }
-  .mb-6 {
-    margin-bottom: calc(var(--spacing) * 6);
-  }
-  .mb-16 {
-    margin-bottom: calc(var(--spacing) * 16);
   }
   .mb-20 {
     margin-bottom: calc(var(--spacing) * 20);
@@ -276,9 +261,6 @@
   .items-start {
     align-items: flex-start;
   }
-  .justify-between {
-    justify-content: space-between;
-  }
   .justify-center {
     justify-content: center;
   }
@@ -291,18 +273,8 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-8 {
-    gap: calc(var(--spacing) * 8);
-  }
   .gap-12 {
     gap: calc(var(--spacing) * 12);
-  }
-  .space-y-1 {
-    :where(& > :not(:last-child)) {
-      --tw-space-y-reverse: 0;
-      margin-block-start: calc(calc(var(--spacing) * 1) * var(--tw-space-y-reverse));
-      margin-block-end: calc(calc(var(--spacing) * 1) * calc(1 - var(--tw-space-y-reverse)));
-    }
   }
   .space-y-4 {
     :where(& > :not(:last-child)) {
@@ -322,18 +294,8 @@
     border-style: var(--tw-border-style);
     border-width: 0px;
   }
-  .border-b {
-    border-bottom-style: var(--tw-border-style);
-    border-bottom-width: 1px;
-  }
   .border-gray-300 {
     border-color: var(--color-gray-300);
-  }
-  .border-white\/10 {
-    border-color: color-mix(in srgb, #fff 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
   }
   .object-cover {
     object-fit: cover;
@@ -350,11 +312,8 @@
   .px-8 {
     padding-inline: calc(var(--spacing) * 8);
   }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
+  .py-16 {
+    padding-block: calc(var(--spacing) * 16);
   }
   .pl-2 {
     padding-left: calc(var(--spacing) * 2);
@@ -369,10 +328,6 @@
     font-size: var(--text-lg);
     line-height: var(--tw-leading, var(--text-lg--line-height));
   }
-  .text-sm {
-    font-size: var(--text-sm);
-    line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -380,18 +335,6 @@
   .font-normal {
     --tw-font-weight: var(--font-weight-normal);
     font-weight: var(--font-weight-normal);
-  }
-  .tracking-\[0\.2rem\] {
-    --tw-tracking: 0.2rem;
-    letter-spacing: 0.2rem;
-  }
-  .tracking-wide {
-    --tw-tracking: var(--tracking-wide);
-    letter-spacing: var(--tracking-wide);
-  }
-  .tracking-wider {
-    --tw-tracking: var(--tracking-wider);
-    letter-spacing: var(--tracking-wider);
   }
   .text-white {
     color: var(--color-white);
@@ -401,9 +344,6 @@
   }
   .not-italic {
     font-style: normal;
-  }
-  .opacity-80 {
-    opacity: 80%;
   }
   .sm\:flex-row {
     @media (width >= 40rem) {
@@ -511,7 +451,7 @@
   }
 }
 @layer component {
-  header {
+  header */ header {
     position: sticky;
     top: calc(var(--spacing) * 0);
     z-index: 50;
@@ -563,18 +503,19 @@
       line-height: var(--tw-leading, var(--text-4xl--line-height));
     }
   }
+  .hamburger {
+    z-index: 50;
+    display: block;
+    cursor: pointer;
+    padding: calc(var(--spacing) * 2);
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+    @media (width >= 64rem) {
+      display: none;
+    }
+  }
   nav {
     display: none;
-    width: 100%;
-    flex-direction: column;
-    gap: calc(var(--spacing) * 2);
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 300ms;
-    transition-duration: 300ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
     @media (width >= 64rem) {
       display: flex;
     }
@@ -586,17 +527,6 @@
     }
     @media (width >= 64rem) {
       gap: calc(var(--spacing) * 4);
-    }
-  }
-  .hamburger {
-    z-index: 50;
-    display: block;
-    cursor: pointer;
-    padding: calc(var(--spacing) * 2);
-    font-size: var(--text-2xl);
-    line-height: var(--tw-leading, var(--text-2xl--line-height));
-    @media (width >= 64rem) {
-      display: none;
     }
   }
   nav a {
@@ -839,6 +769,9 @@
     }
   }
   .footer-copy {
+    @media (width >= 48rem) {
+      align-items: center;
+    }
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -870,6 +803,41 @@
     padding: calc(var(--spacing) * 0);
   }
 }
+.menu-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+.menu-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu-section img {
+  width: 100%;
+  max-height: 50vh;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.menu-item-name {
+  text-transform: uppercase;
+}
+.menu-item-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.menu-item-price {
+  margin-right: 2rem;
+  letter-spacing: 0.2rem;
+}
 @property --tw-space-y-reverse {
   syntax: "*";
   inherits: false;
@@ -881,18 +849,6 @@
   initial-value: solid;
 }
 @property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-tracking {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-duration {
-  syntax: "*";
-  inherits: false;
-}
-@property --tw-ease {
   syntax: "*";
   inherits: false;
 }
@@ -974,9 +930,6 @@
       --tw-space-y-reverse: 0;
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-tracking: initial;
-      --tw-duration: initial;
-      --tw-ease: initial;
       --tw-translate-x: 0;
       --tw-translate-y: 0;
       --tw-translate-z: 0;

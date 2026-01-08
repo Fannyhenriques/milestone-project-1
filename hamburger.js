@@ -2,5 +2,6 @@ const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("nav");
 
 hamburger.addEventListener("click", () => {
-    navMenu.classList.toggle("hidden");
+    console.log("clicked")
+    navMenu.classList.toggle('hidden');
 });

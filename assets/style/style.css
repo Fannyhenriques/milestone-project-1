@@ -67,38 +67,35 @@
 
 @layer component {
 
-  header {
+  header */ header {
     @apply sticky top-0 z-50;
     background-color: var(--color-background);
   }
 
   .layout-wrapper-header {
-    /* mobile */
     @apply flex justify-between items-center px-6 py-2 border-b;
     border-color: var(--color-primary);
-    /* tablet */
     @apply lg:px-6 lg:py-1;
-    /* desktop */
     @apply xl:px-12 xl:py-1;
   }
 
+  /* logo */
   .logo {
     @apply text-2xl font-light lg:text-[2rem] xl:text-[2.5rem];
   }
-
 
   .logo-accent {
     @apply text-xl lg:text-2xl xl:text-4xl;
   }
 
-  nav {
-    @apply hidden flex-col gap-2 w-full transition-all duration-300 ease-in-out;
-    @apply lg:flex lg:flex-row lg:gap-4 lg:w-auto;
-
-  }
-
+  /* hamburger */
   .hamburger {
     @apply block text-2xl p-2 cursor-pointer z-50 lg:hidden;
+  }
+
+  /* nav-bar */
+  nav {
+    @apply hidden lg:flex lg:flex-row lg:gap-4 lg:w-auto;
   }
 
   nav a {
@@ -118,6 +115,7 @@
     border-color: var(--color-primary-hover);
   }
 
+  /* hero */
   .hero-container {
     @apply relative w-full overflow-hidden max-h-[80vh];
   }
@@ -132,6 +130,7 @@
     @apply w-full h-full object-cover block object-bottom;
   }
 
+  /* buttons */
   .hero-buttons {
     @apply absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2;
 
@@ -226,8 +225,8 @@
   .footer-copy {
     @apply flex flex-col items-start leading-[1.2] text-left;
     @apply md:items-center;
-    /* @apply flex flex-col items-start leading-[1.2] text-left;
-    @apply md:items-center; */
+    @apply flex flex-col items-start leading-[1.2] text-left;
+    @apply md:items-center;
   }
 
   .footer-contact-content {
@@ -247,4 +246,46 @@
   .footer-social a {
     @apply p-0;
   }
+}
+
+.menu-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.menu-section h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.menu-section img {
+  width: 100%;
+  max-height: 50vh;
+  overflow: hidden;
+  object-fit: cover;
+  display: block;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-item-name {
+  text-transform: uppercase;
+}
+
+.menu-item-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.menu-item-price {
+  margin-right: 2rem;
+  letter-spacing: 0.2rem;
 }
