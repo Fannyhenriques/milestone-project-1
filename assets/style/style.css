@@ -130,76 +130,6 @@
     @apply w-full h-full object-cover block object-bottom;
   }
 
-  /* buttons */
-  .hero-buttons {
-    @apply absolute z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex flex-col gap-2;
-
-    @apply lg:flex-row lg:gap-4;
-  }
-
-  .btn-container {
-    @apply mt-4 p-4 text-center;
-  }
-
-  .btn {
-    @apply inline-flex justify-center uppercase m-4 w-56 p-4 border;
-    border-color: var(--color-primary);
-  }
-
-  .btn-primary {
-    @apply text-[var(--color-background)];
-    background-color: var(--color-primary);
-  }
-
-  .btn-primary:hover {
-    background-color: var(--color-primary-hover);
-  }
-
-  .btn-secondary {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-  }
-
-  .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-  }
-
-  .reservation-btn {
-    @apply lg:m-16;
-  }
-
-  .intro {
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    align-items: center;
-    max-width: 100%;
-    margin: 5rem auto 0;
-
-  }
-
-  .intro-text-container,
-  .intro-img-container {
-    flex: 1;
-  }
-
-  .intro-text {
-    max-width: 30rem;
-  }
-
-  .intro-img {
-    flex: 1;
-    max-width: 35%;
-    height: 500px;
-    object-fit: cover;
-  }
-
-  .intro--reverse {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-
   .content-box {
     @apply mx-auto max-w-[90%] p-8;
     @apply lg:max-w-[70%];
@@ -262,6 +192,95 @@
   }
 }
 
+.hero-buttons {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+
+.btn {
+  border: 1px solid var(--color-primary);
+  padding: 1rem;
+  margin: 1rem;
+  display: inline-flex;
+  width: 14rem;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.btn-secondary {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+button {
+  font-family: 'Hepta Slab', serif;
+}
+
+.reservation-btn {
+  margin: 4rem;
+}
+
+.reservation-form button {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.intro {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+  max-width: 100%;
+  margin: 5rem auto 0;
+
+}
+
+.intro-text-container,
+.intro-img-container {
+  flex: 1;
+}
+
+.intro-text {
+  max-width: 30rem;
+}
+
+.intro-img {
+  flex: 1;
+  max-width: 35%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.intro--reverse {
+  display: flex;
+  flex-direction: row-reverse;
+}
 
 .contact-layout {
   display: grid;

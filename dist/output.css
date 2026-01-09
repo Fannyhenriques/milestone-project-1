@@ -504,84 +504,6 @@
     object-fit: cover;
     object-position: bottom;
   }
-  .hero-buttons {
-    position: absolute;
-    top: calc(1/2 * 100%);
-    left: calc(1/2 * 100%);
-    z-index: 10;
-    display: flex;
-    --tw-translate-x: calc(calc(1/2 * 100%) * -1);
-    --tw-translate-y: calc(calc(1/2 * 100%) * -1);
-    translate: var(--tw-translate-x) var(--tw-translate-y);
-    flex-direction: column;
-    gap: calc(var(--spacing) * 2);
-    @media (width >= 64rem) {
-      flex-direction: row;
-    }
-    @media (width >= 64rem) {
-      gap: calc(var(--spacing) * 4);
-    }
-  }
-  .btn-container {
-    margin-top: calc(var(--spacing) * 4);
-    padding: calc(var(--spacing) * 4);
-    text-align: center;
-  }
-  .btn {
-    margin: calc(var(--spacing) * 4);
-    display: inline-flex;
-    width: calc(var(--spacing) * 56);
-    justify-content: center;
-    border-style: var(--tw-border-style);
-    border-width: 1px;
-    padding: calc(var(--spacing) * 4);
-    text-transform: uppercase;
-    border-color: var(--color-primary);
-  }
-  .btn-primary {
-    color: var(--color-background);
-    background-color: var(--color-primary);
-  }
-  .btn-primary:hover {
-    background-color: var(--color-primary-hover);
-  }
-  .btn-secondary {
-    background-color: var(--color-background);
-    color: var(--color-primary);
-  }
-  .btn-secondary:hover {
-    background-color: var(--color-primary);
-    color: var(--color-background);
-  }
-  .reservation-btn {
-    @media (width >= 64rem) {
-      margin: calc(var(--spacing) * 16);
-    }
-  }
-  .intro {
-    display: flex;
-    justify-content: center;
-    gap: 6rem;
-    align-items: center;
-    max-width: 100%;
-    margin: 5rem auto 0;
-  }
-  .intro-text-container, .intro-img-container {
-    flex: 1;
-  }
-  .intro-text {
-    max-width: 30rem;
-  }
-  .intro-img {
-    flex: 1;
-    max-width: 35%;
-    height: 500px;
-    object-fit: cover;
-  }
-  .intro--reverse {
-    display: flex;
-    flex-direction: row-reverse;
-  }
   .content-box {
     margin-inline: auto;
     max-width: 90%;
@@ -639,6 +561,78 @@
   .footer-social a {
     padding: 0;
   }
+}
+.hero-buttons {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 1rem;
+}
+.btn-container {
+  margin-top: 1rem;
+  padding: 1rem;
+  text-align: center;
+}
+.btn {
+  border: 1px solid var(--color-primary);
+  padding: 1rem;
+  margin: 1rem;
+  display: inline-flex;
+  width: 14rem;
+  justify-content: center;
+  text-transform: uppercase;
+}
+.btn-primary {
+  color: var(--color-background);
+  background-color: var(--color-primary);
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+}
+.btn-secondary {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+}
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+button {
+  font-family: 'Hepta Slab', serif;
+}
+.reservation-btn {
+  margin: 4rem;
+}
+.reservation-form button {
+  display: block;
+  margin: 0 auto;
+}
+.intro {
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  align-items: center;
+  max-width: 100%;
+  margin: 5rem auto 0;
+}
+.intro-text-container, .intro-img-container {
+  flex: 1;
+}
+.intro-text {
+  max-width: 30rem;
+}
+.intro-img {
+  flex: 1;
+  max-width: 35%;
+  height: 500px;
+  object-fit: cover;
+}
+.intro--reverse {
+  display: flex;
+  flex-direction: row-reverse;
 }
 .contact-layout {
   display: grid;
@@ -738,29 +732,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-translate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
-@property --tw-translate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: 0;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-translate-x: 0;
-      --tw-translate-y: 0;
-      --tw-translate-z: 0;
     }
   }
 }
