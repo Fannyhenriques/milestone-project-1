@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 :root {
   /* base color   */
   --color-background: rgb(12, 12, 12);
@@ -153,9 +151,9 @@ header {
 }
 
 /* hamburger */
-/* .hamburger {
-  @apply block text-2xl p-2 cursor-pointer z-50 lg:hidden;
-} */
+.hamburger {
+  display: none;
+}
 
 /* nav-bar */
 nav {
@@ -179,6 +177,106 @@ nav a:hover {
 .navlink-res:hover {
   border-color: var(--color-primary-hover);
 }
+
+@media (max-width: 1200px) {
+  .hamburger {
+    display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+
+    max-height: 500px;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
+
+    /* hamburger */
+    .hamburger {
+      display: none;
+    }
+
+    /* nav-bar */
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    nav a {
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--color-primary-hover);
+    }
+
+    .navlink-res {
+      border: 1px solid var(--color-primary);
+      padding: 0.5rem;
+    }
+
+    .navlink-res:hover {
+      border-color: var(--color-primary-hover);
+    }
+
+    @media (max-width: 1200px) {
+      .hamburger {
+        display: block;
+        font-size: 2rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--color-primary);
+      }
+
+      nav {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: var(--color-background);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+
+        max-height: 500px;
+        opacity: 1;
+        overflow: hidden;
+        transform: translateY(0);
+        transition: translate 3s ease-in-out;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .navlink-res {
+        border: none;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .navlink-res {
+    border: none;
+  }
+}
+
 
 /* hero */
 .hero-container {
