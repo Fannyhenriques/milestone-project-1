@@ -576,7 +576,6 @@ button {
   .contact-label {
     font-size: var(--font-xxs);
   }
-
 }
 
 /* =====================
@@ -587,15 +586,17 @@ button {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-md);
+  padding: var(--spacing-xs);
 }
 
 .reservation-fieldset {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-s);
-  width: 600px;
   margin: 0 auto;
   border: none;
+  padding: 0;
+  width: 600px;
 }
 
 .form-row {
@@ -614,6 +615,19 @@ button {
   flex: 2;
   font-size: var(--spacing-s);
   padding: var(--spacing-xs);
+}
+
+@media (max-width: 768px) {
+
+  .reservation-fieldset {
+    max-width: 100%;
+    flex-shrink: 1;
+  }
+
+  .form-row label {
+    font-size: var(--font-xxs);
+  }
+
 }
 
 /* =====================
