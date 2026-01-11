@@ -683,12 +683,15 @@ button {
   font-style: normal;
 }
 
-.footer-copy {
-  line-height: 1.2;
+.contact-row {
+  display: flex;
+  font-size: var(--font-xs);
+  gap: var(--spacing-xs);
 }
 
-.footer-contact-content {
-  text-align: left;
+.contact-link {
+  padding: 0;
+  margin: 0;
 }
 
 .footer-social>div {
@@ -708,34 +711,40 @@ button {
   padding: 0;
 }
 
-@media (max-width: 1024px) {
-  footer {
-    display: none;
+.footer-copy {
+  line-height: 1.2;
+  align-self: center;
+}
+
+@media (max-width:1024px) {
+  .footer-layout {
+    padding: var(--spacing-s) var(--spacing-md);
+    gap: var(--spacing-md);
   }
 
-  .footer-layout {
-    display: none;
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
   }
 
   .footer-contact,
-  .footer-social,
   .footer-copy {
-    display: none;
+    font-size: var(--font-xxs);
+  }
+}
+
+@media (max-width: 769px) {
+
+  .footer-layout {
+    flex-direction: column;
+    justify-content: center;
   }
 
-  .footer-contact-content {
-    display: none;
-  }
-
-  .footer-social>div {
-    display: none;
-  }
-
-  .footer-social img {
-    display: none;
-  }
-
-  .footer-social a {
-    display: none;
+  .footer-contact,
+  .footer-copy {
+    margin: 0 auto;
+    width: 170px;
+    align-items: flex-start;
+    font-size: var(--font-xxs);
   }
 }
