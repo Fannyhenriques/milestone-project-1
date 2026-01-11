@@ -415,9 +415,8 @@ button {
   padding: var(--spacing-xl) var(--spacing-md);
 }
 
-.menu-section h2 {
-  text-align: center;
-  text-transform: uppercase;
+.menu-section h3 {
+  text-align: left;
 }
 
 .menu-section img {
@@ -449,6 +448,31 @@ button {
 .menu-item-price {
   margin-right: var(--spacing-md);
   letter-spacing: 0.2rem;
+}
+
+@media (max-width: 768px) {
+  .menu-section img {
+    max-height: 40vh;
+  }
+}
+
+@media (max-width: 425px) {
+  .menu-section {
+    padding: var(--spacing-md) var(--spacing-s);
+  }
+
+  .menu-section h3 {
+    text-align: center;
+  }
+
+  .menu-category ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .menu-item-price {
+    margin: 0;
+  }
 }
 
 /* =====================
