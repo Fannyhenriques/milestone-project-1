@@ -109,7 +109,6 @@ a {
 /* =====================
    LAYOUT HELPERS
 ===================== */
-
 .content-box {
   margin: 0 auto;
   text-align: center;
@@ -118,9 +117,22 @@ a {
 }
 
 .content-box img {
-  max-width: 100%;
+  max-width: 90%;
   height: 60vh;
   padding-top: var(--spacing-xl);
+  object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+  .content-box {
+    max-width: 80%;
+  }
+
+  .content-box img {
+    max-width: 100%;
+    height: auto;
+    padding-top: var(--spacing-l);
+  }
 }
 
 /* =====================
@@ -203,81 +215,33 @@ nav a:hover {
     opacity: 1;
     overflow: hidden;
     transform: translateY(0);
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  nav {
-    display: flex;
-    gap: var(--spacing-s);
-  }
-
-  nav a {
-    text-transform: uppercase;
-  }
-
-  nav a:hover {
-    color: var(--color-primary-hover);
-  }
-
-  .navlink-res {
-    border: 1px solid var(--color-primary);
-    padding: var(--spacing-xs);
-  }
-
-  .navlink-res:hover {
-    border-color: var(--color-primary-hover);
-  }
-
-  @media (max-width: 1200px) {
-    .hamburger {
-      display: block;
-      font-size: var(--spacing-md);
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: var(--color-primary);
-    }
-
-    nav {
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background-color: var(--color-background);
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
-      padding: var(--spacing-s);
-
-      max-height: 500px;
-      opacity: 1;
-      overflow: hidden;
-      transform: translateY(0);
-      transition: translate 3s ease-in-out;
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .navlink-res {
-      border: none;
-    }
-  }
-
-  .hidden {
-    display: none;
+    transition: translate 3s ease-in-out;
   }
 
   .navlink-res {
     border: none;
   }
+
+  .hidden {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .layout-wrapper-header {
+    padding: var(--spacing-xxs) var(--spacing-xs);
+  }
+
+  .logo {
+    font-size: var(--font-l);
+  }
+
+  .logo-accent {
+    font-size: var(--font-md);
+  }
 }
 
 /* HERO */
-
 .hero-container {
   position: relative;
   width: 100%;
@@ -312,6 +276,18 @@ nav a:hover {
   display: flex;
   gap: var(--spacing-s);
 }
+
+@media (max-width: 768px) {
+  .hero-container {
+    height: 60vh;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--spacing-xxs);
+  }
+}
+
 
 /* BUTTONS */
 
