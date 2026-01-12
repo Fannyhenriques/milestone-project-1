@@ -80,9 +80,9 @@ Short description of the project.
 - A basic overall layout of the homepage was created using the Lucidchart app, outlining the structure and alignment of the header, main content, and footer.
 
 <div style="display: flex; gap: 10px; align-items: flex-start;"> 
-<img src="/assets/images/lucid-print-desktop.png" alt="Desktop" width="200"/>
-<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="200"/>
-<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="100"/>
+<img src="/assets/images/lucid-print-desktop.png" alt="Desktop" width="300"/>
+<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="300"/>
+<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="300"/>
 </div>
 
 ### Layout and Styling
@@ -128,7 +128,7 @@ Short description of the project.
 
 This approach was chosen to maintain visual clarity, avoid a cluttered interface, and create a cohesive user experience.
 
-<img src="/assets/images/color-scheme.png" alt="Color-scheme" width="300"/>
+<img src="/assets/images/color-scheme.png" alt="Color-scheme" width="700" heigh="auto"/>
 
 
 - The colour variables were defined using CSS custom properties:
@@ -162,7 +162,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 - The homepage features a full-width hero image designed to welcome visitors and set the mood. Other images accompany text blocks on the homepage, About, Menu, and Events pages, providing context and visual interest for each section.
 
-<img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-screenshot" width="300"/>
+<img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-screenshot" width="600" heigh="auto"/>
 
 - All images are responsive and automatically cropped or scaled to fit different screen sizes and layouts, ensuring a consistent visual flow throughout the site.
 
@@ -170,18 +170,18 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 - The website uses a single font family from Google Fonts: [Hepta Slab](https://fonts.google.com/specimen/Hepta+Slab), applied consistently across all pages to maintain a cohesive visual style. Different font sizes and weights are used to create hierarchy and visual interest.
 - Header / Navbar: The logo in the header is styled with the same font, but with a playful variation in font size to emphasize part of the word: hospiTABLE. This highlights the "table" in hospitable, fitting the restaurant theme.
 
-<img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="300"/>
+<img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="700" heigh="auto"/>
 
 - Body text: All other text uses the same font with adjusted letter-spacing for readability and a more open, airy layout.
 
-<img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="300"/>
+<img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="500"/>
 
 ### Icons
 - The website uses clickable social media icons in the footer to link to Instagram, Facebook, and Tripadvisor, which are relevant platforms for a restaurant.
 
 - Instead of using vector icons or an icon library, these icons were sourced as images from Pexels and wrapped in anchor (`<a>`) elements. The original images were black, but to match the overall design, a CSS invert filter was applied to make them white. This approach was chosen to maintain visual consistency with the website’s style.
 
-<img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="300"/>
+<img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="400" heigh="auto"/>
 
 - To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for all users.
 
@@ -212,11 +212,11 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
 
-<img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="400"/>
+<img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="700" heigh="auto"/>
 
 To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets.
 
-<img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="300"/>
+<img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
 
 The layout adapts down to 320px without issues. The only change is that the logo switches font and becomes smaller to fit smaller screens. 
 
@@ -224,11 +224,11 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - The footer consists of three sections: contact info, social icons, and copyright. These elements are displayed in a row on larger screens using Flexbox. 
 
-<img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="300"/>
+<img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
 
 - Ideally, all elements would appear in a single row on all screens. However, to maintain accessibility and avoid reducing text size, the content is stacked vertically on smaller screens. This was not the original intention for the layout, but it was the most practical solution to keep each section readable. 
 
-<img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="300"/>
+<img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="500" heigh="auto"/>
 
 - Extra wrapper `<div>`: An additional `<div>` around the contact info was used to maintain even spacing and alignment. Without it, the rows appeared uneven. 
 
@@ -246,7 +246,7 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - Below the hero image, there is a short descriptive message, giving a concise overview of the restaurant and what it offers. This section helps fulfill the primary goal of informing first-time visitors about the restaurant.
 
-<img src="/assets/images/hero-img-screenshot.png" alt="hero screenshot desktop" width="300"/>
+<img src="/assets/images/hero-img-screenshot.png" alt="hero screenshot desktop" width="700" heigh="auto"/>
 
 **Feature Sections**
 
@@ -259,34 +259,34 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - This alternating layout maintains visual interest, guides the user through the content in a natural flow, and reinforces a consistent UX pattern across the site.
 
-<img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="300"/>
+<img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="600" heigh="auto"/>
 
 - On tablet and mobile viewports, the layout switches from flex-row to flex-column, stacking text and image vertically for improved readability and responsiveness. This ensures that the content remains visually balanced and accessible on smaller screens.
 
-<img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="300"/>
+<img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="600" heigh="auto"/>
 
 #### Menu page 
 
 - The Menu page features a simple layout showcasing a fictional menu. Each menu item includes a title, a brief description, and a price. A supporting image is included to intrigue potential guests and give a visual sense of the dishes. Like other pages, the section concludes with two call-to-action buttons directing users to the Contact and Booking pages.
 
-<img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="300"/>
+<img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="500" heigh="auto"/>
 
 #### About Page
 
 - The About page contains an h1 and a `<p>` providing more detailed information about the restaurant. To make this section more engaging from a UX perspective, a supporting image is included alongside the text. Below this, call-to-action buttons guide the user to the Contact and Booking pages, encouraging further interaction.
 
-<img src="/assets/images/about-screenshot.png" alt="about page screenshot" width="300"/>
+<img src="/assets/images/about-screenshot.png" alt="about page screenshot" width="500" heigh="auto"/>
 
 #### contact page
 
 - The Contact page is divided into three main sections: contact information (address, phone, email), opening hours, and an embedded Google map. These sections are arranged using CSS Grid, each taking up one fraction of the grid, with the map spanning two columns at the bottom to use the full width of the container.
 
-<img src="/assets/images/contact-desktop.png" alt="contact page desktop screenshot" width="300"/>
+<img src="/assets/images/contact-desktop.png" alt="contact page desktop screenshot" width="500" heigh="auto"/>
 
 
 - On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. Achieving full responsiveness was slightly challenging, particularly for the map. 
 
-<img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="300"/>
+<img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="500" heigh="auto"/>
 
 
 #### Events page
@@ -294,7 +294,7 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - Responsiveness: The layout follows the same responsive design and media queries as the homepage. On tablet and mobile screens, the content stacks vertically to ensure readability and a smooth user experience.
 
-<img src="/assets/images/events desktop.png" alt="event page mobile screenshot" width="300"/>
+<img src="/assets/images/events desktop.png" alt="event page mobile screenshot" width="600" heigh="auto"/>
 
 
 #### Reservation / Booking - Form Page
@@ -303,7 +303,7 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - Reservations page: Provides information about making a reservation and guides the guest to the booking page if they wish to proceed.
 
-<img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="300"/>
+<img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
 
 -Booking page (book.html): Contains the booking form, which includes:
 
@@ -312,7 +312,7 @@ The layout adapts down to 320px without issues. The only change is that the logo
 * A number input to select the number of guests (up to 7)
 * Text inputs for first name, last name, and email address
 
-<img src="/assets/images/booking-form.png" alt="booking form screenshot" width="300"/>
+<img src="/assets/images/booking-form.png" alt="booking form screenshot" width="600" heigh="auto"/>
 
 ---
 
@@ -327,18 +327,18 @@ The layout adapts down to 320px without issues. The only change is that the logo
 - Tailwind – Evaluated during development for utility-first styling, but not used in the final site.
 
 ### Libraries 
-- Lucid App - to create wireframes
-- Google Fonts - to implement the fonts used in the site
-- Pexels.com - To source the images used in the site
+- Lucidchart app- to create wireframes
+- Google Fonts - to implement the font used in the site
+- Pexels.com - To source the images and icons used in the site
 
-### Platforms 
+### Tools & Platforms 
 
-- Git - For version control and deployment
-- GitHub - used as the code editor and save files
-- Chrome dev tools - To test and troubleshoot various features and also test responsiveness of the pages
-
-### Tools & Platforms
-- 
+- Git – used for version control
+- GitHub – used to host the project repository and deploy the site via GitHub Pages
+- Visual Studio Code – used as the code editor during development
+- Chrome DevTools – used for debugging, testing responsiveness, and troubleshooting layout issues
+- W3C HTML Validator – for HTML-validation
+- W3C CSS Validator - for CSS validation 
 
 ---
 
@@ -364,11 +364,59 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 ## Testing
 
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss"
+            alt="Valid CSS!" />
+    </a>
+</p>
+
 ### Validation
+
+| **Page**          | **W3C HTML Validator Result** | **Link**                                                                                                                       |
+| ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| Index.html        | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html)        |
+| Menu.html         | Fail                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fmenu.html)         |
+| About.html        | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fabout.html)        |
+| Contact.html      | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fcontact.html)      |
+| Events.html       | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fevents.html)       |
+| Reservations.html | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Freservations.html) |
+| Book.html         | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fbook.html)         |
+
+
 - 
 
+| **Page**          | **W3C CSS Validator Result** | **Link**                                                                                                                                     
+| ----------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Index.html        | Pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)                  |
+| Menu.html         | pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fmenu.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)         |
+| About.html        | pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fabout.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)        |
+| Contact.html      | pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fcontact.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)      |
+| Events.html       | Pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fevents.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)       |
+| Reservations.html | Pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Freservations.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv) |
+| Book.html         | Pass                         | [Validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fbook.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=sv)         |
+
+
+
 ### Manual Testing
-- 
+
+- All test cases listed below were executed and passed successfully.
+
+| Page / Section           | Test Case                                                                                 | Expected Result                                                                        |
+| ------------------------ | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| All Pages                | Test navbar links including logo-link to index.html                                       | User navigates to the correct page when clicking links                                 |
+| All Pages                | Test social media links and address links in footer                                       | Links open correct social media sites or apps                                          |
+| Homepage (Hero)          | Test CTA buttons (styled links)                                                           | Links navigate to Contact and Reservations pages                                       |
+| Menu Page                | Test CTA button-links                                                                     | Links navigate to Contact and Booking pages                                            |
+| About Page               | Test CTA button-links                                                                     | Links navigate to Contact and Booking pages                                            |
+| Contact Page             | Test address links                                                                        | Opens appropriate app or map location                                                  |
+| Contact Page             | Test embedded Google map – scroll and zoom                                                | Map is interactive and scroll/zoom works correctly                                     |
+| Events Page              | Test Contact-link button                                                                  | Navigates to Contact page                                                              |
+| Reservations Page        | Test address links                                                                        | Opens appropriate app                                                                           |
+| Booking Page (book.html) | Test form validation and submission                                                       | Blocks submission if required fields empty; allows submission if all fields are filled |
+| All Pages (Responsive)   | Check layout on desktop, tablet, mobile for navbar, hero, text/image sections, and footer | Layout adjusts correctly at different screen sizes                                     |
+|                          |                                            |                                              |
 
 ### Known Bugs
 - 
