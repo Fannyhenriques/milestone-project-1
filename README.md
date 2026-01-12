@@ -64,13 +64,15 @@ Short description of the project.
 ## Design
 
 ### LucidApp
+<div style="display: flex; gap: 10px; align-items: flex-start;">
+>
 - Desktop: 
-<img src="/assets/images/lucid-printscreen-desktop.png" alt="Desktop" width="300"/>
+<img src="/assets/images/lucid-print-desktop.png" alt="Desktop" width="200"/>
 - Tablet
-<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="200"/>
+<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="100"/>
 - Mobile
-<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="150"/>
-
+<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="90"/>
+</div>
 
 ### Layout and Styling
 - 
