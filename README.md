@@ -81,8 +81,8 @@ Short description of the project.
 
 <div style="display: flex; gap: 10px; align-items: flex-start;"> 
 <img src="/assets/images/lucid-print-desktop.png" alt="Desktop" width="300"/>
-<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="300"/>
-<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="300"/>
+<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="200"/>
+<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="100"/>
 </div>
 
 ### Layout and Styling
@@ -128,8 +128,9 @@ Short description of the project.
 
 This approach was chosen to maintain visual clarity, avoid a cluttered interface, and create a cohesive user experience.
 
+<p align="center">
 <img src="/assets/images/color-scheme.png" alt="Color-scheme" width="700" heigh="auto"/>
-
+</p>
 
 - The colour variables were defined using CSS custom properties:
 
@@ -161,35 +162,37 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 - Images are used to enhance the user experience by showcasing the food, atmosphere, and concept of the restaurant.
 
 - The homepage features a full-width hero image designed to welcome visitors and set the mood. Other images accompany text blocks on the homepage, About, Menu, and Events pages, providing context and visual interest for each section.
-
+<p align="center">
 <img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-screenshot" width="600" heigh="auto"/>
-
+</p>
 - All images are responsive and automatically cropped or scaled to fit different screen sizes and layouts, ensuring a consistent visual flow throughout the site.
 
 ### Typography
 - The website uses a single font family from Google Fonts: [Hepta Slab](https://fonts.google.com/specimen/Hepta+Slab), applied consistently across all pages to maintain a cohesive visual style. Different font sizes and weights are used to create hierarchy and visual interest.
-- Header / Navbar: The logo in the header is styled with the same font, but with a playful variation in font size to emphasize part of the word: hospiTABLE. This highlights the "table" in hospitable, fitting the restaurant theme.
-
-<img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="700" heigh="auto"/>
-
-- Body text: All other text uses the same font with adjusted letter-spacing for readability and a more open, airy layout.
-
-<img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="500"/>
-
+**Header / Navbar:**
+-  The logo in the header is styled with the same font, but with a playful variation in font size to emphasize part of the word: hospiTABLE. This highlights the "table" in hospitable, fitting the restaurant theme.
+<p align="center">
+<img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="900" heigh="auto"/>
+</p>
+**Body text:**
+-  All other text uses the same font with adjusted letter-spacing for readability and a more open, airy layout.
+<p align="center">
+<img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="400"/>
+</p>
 ### Icons
 - The website uses clickable social media icons in the footer to link to Instagram, Facebook, and Tripadvisor, which are relevant platforms for a restaurant.
 
 - Instead of using vector icons or an icon library, these icons were sourced as images from Pexels and wrapped in anchor (`<a>`) elements. The original images were black, but to match the overall design, a CSS invert filter was applied to make them white. This approach was chosen to maintain visual consistency with the website’s style.
-
-<img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="400" heigh="auto"/>
-
+<p align="center">
+<img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="350" heigh="auto"/>
+</p>
 - To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for all users.
 
 ---
 
 ## Features
 
-- The website consists of seven pages, six of which are accessible via the navigation bar, while the seventh page (book.html) is reached by clicking the “Book a Table” button on the Reservations page.
+The website consists of seven pages, six of which are accessible via the navigation bar, while the seventh page (book.html) is reached by clicking the “Book a Table” button on the Reservations page.
 
 1. **Homepage:** Introduces the restaurant and provides general information for first-time visitors.
 2. **About:** Offers a more detailed story about the restaurant, its concept, and values.
@@ -200,7 +203,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 7. **Book:** The booking page where guests can submit a reservation form, accessed via the Reservations page.
 
 
-- This structure ensures that visitors can easily navigate the site and access the information most relevant to their needs.
+This structure ensures that visitors can easily navigate the site and access the information most relevant to their needs.
 
 ### Page Elements
 
@@ -212,24 +215,29 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
 
-<img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="700" heigh="auto"/>
+<p align="center">
+<img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="900" heigh="auto"/>
+</p>
 
 To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets.
 
+<p align="center">
 <img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
+</p>
 
 The layout adapts down to 320px without issues. The only change is that the logo switches font and becomes smaller to fit smaller screens. 
 
 - **Footer:** 
 
 - The footer consists of three sections: contact info, social icons, and copyright. These elements are displayed in a row on larger screens using Flexbox. 
-
+<p align="center">
 <img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
-
+</p>
 - Ideally, all elements would appear in a single row on all screens. However, to maintain accessibility and avoid reducing text size, the content is stacked vertically on smaller screens. This was not the original intention for the layout, but it was the most practical solution to keep each section readable. 
 
+<p align="center">
 <img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="500" heigh="auto"/>
-
+</p>
 - Extra wrapper `<div>`: An additional `<div>` around the contact info was used to maintain even spacing and alignment. Without it, the rows appeared uneven. 
 
 - Fixed width on mobile: A width of 170px was applied to center the footer sections visually. While this limits flexibility, it was the simplest way to achieve a balanced layout on small screens. 
@@ -246,7 +254,9 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - Below the hero image, there is a short descriptive message, giving a concise overview of the restaurant and what it offers. This section helps fulfill the primary goal of informing first-time visitors about the restaurant.
 
+<p align="center">
 <img src="/assets/images/hero-img-screenshot.png" alt="hero screenshot desktop" width="700" heigh="auto"/>
+</p>
 
 **Feature Sections**
 
@@ -258,43 +268,50 @@ The layout adapts down to 320px without issues. The only change is that the logo
 3. Sustainability practices and approach
 
 - This alternating layout maintains visual interest, guides the user through the content in a natural flow, and reinforces a consistent UX pattern across the site.
-
-<img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="600" heigh="auto"/>
-
+<p align="center">
+<img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="500" heigh="auto"/>
+</p>
 - On tablet and mobile viewports, the layout switches from flex-row to flex-column, stacking text and image vertically for improved readability and responsiveness. This ensures that the content remains visually balanced and accessible on smaller screens.
-
-<img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="600" heigh="auto"/>
+<p align="center">
+<img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="400" heigh="auto"/>
+</p>
 
 #### Menu page 
 
 - The Menu page features a simple layout showcasing a fictional menu. Each menu item includes a title, a brief description, and a price. A supporting image is included to intrigue potential guests and give a visual sense of the dishes. Like other pages, the section concludes with two call-to-action buttons directing users to the Contact and Booking pages.
-
+<p align="center">
 <img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="500" heigh="auto"/>
-
+</p>
 #### About Page
 
 - The About page contains an h1 and a `<p>` providing more detailed information about the restaurant. To make this section more engaging from a UX perspective, a supporting image is included alongside the text. Below this, call-to-action buttons guide the user to the Contact and Booking pages, encouraging further interaction.
 
+<p align="center">
 <img src="/assets/images/about-screenshot.png" alt="about page screenshot" width="500" heigh="auto"/>
+</p>
 
 #### contact page
 
 - The Contact page is divided into three main sections: contact information (address, phone, email), opening hours, and an embedded Google map. These sections are arranged using CSS Grid, each taking up one fraction of the grid, with the map spanning two columns at the bottom to use the full width of the container.
 
+<p align="center">
 <img src="/assets/images/contact-desktop.png" alt="contact page desktop screenshot" width="500" heigh="auto"/>
-
+</p>
 
 - On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. Achieving full responsiveness was slightly challenging, particularly for the map. 
 
-<img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="500" heigh="auto"/>
-
+<p align="center">
+<img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="300" heigh="auto"/>
+</p>
 
 #### Events page
 - The Events page provides information about larger bookings, catering options, and upcoming events such as live music nights. This page uses the same CSS classes as the homepage (index.html), which helps keep the stylesheet maintainable and the code clean.
 
 - Responsiveness: The layout follows the same responsive design and media queries as the homepage. On tablet and mobile screens, the content stacks vertically to ensure readability and a smooth user experience.
 
-<img src="/assets/images/events desktop.png" alt="event page mobile screenshot" width="600" heigh="auto"/>
+<p align="center">
+<img src="/assets/images/events desktop.png" alt="event page mobile screenshot" width="500" heigh="auto"/>
+</p>
 
 
 #### Reservation / Booking - Form Page
@@ -302,17 +319,19 @@ The layout adapts down to 320px without issues. The only change is that the logo
 - Originally, the booking form was included directly on the Reservations page. After reviewing other restaurant websites, I realised that it provides a better user experience to have a separate page for the booking form.
 
 - Reservations page: Provides information about making a reservation and guides the guest to the booking page if they wish to proceed.
-
+<p align="center">
 <img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
+</p>
 
 -Booking page (book.html): Contains the booking form, which includes:
-
 * Radio buttons to choose Lunch or Dinner
 * A date picker for selecting the reservation date
 * A number input to select the number of guests (up to 7)
 * Text inputs for first name, last name, and email address
 
-<img src="/assets/images/booking-form.png" alt="booking form screenshot" width="600" heigh="auto"/>
+<p align="center">
+<img src="/assets/images/booking-form.png" alt="booking form screenshot" width="500" heigh="auto"/>
+</p>
 
 ---
 
@@ -345,10 +364,23 @@ The layout adapts down to 320px without issues. The only change is that the logo
 ## Development & Deployment
 
 ### Git Commits
-- 
 
-### GitHub Pages
-- 
+During development, I aimed to commit frequently with clear and concise commit messages that describe the changes made. The goal was to keep the commit history easy to follow and understandable for others reviewing the project.
+
+### Publishing
+
+The site was deployed to GitHub Pages, 
+which allows the project to be hosted directly from the GitHub repository.
+
+To deploy the site, the following steps were taken:
+1. Navigate to the project repository on GitHub and open the Settings tab.
+2. In the left-hand menu, select Pages under the Code and automation section.
+3. Under Source, choose Deploy from a branch.
+4. Select the main branch and set the folder to /(root).
+5. Click Save to publish the site.
+
+After saving, the site was automatically deployed. 
+Any subsequent pushes to the main branch will update the live site.
 
 ---
 
