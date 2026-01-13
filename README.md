@@ -4,7 +4,7 @@ Short description of the project.
 
 [View live project here](https://fannyhenriques.github.io/milestone-project-1/)  
 
-![Project mockup](#)
+
 
 ---
 
@@ -45,32 +45,42 @@ Short description of the project.
    - [Code](#code)
    - [Content](#content)
    - [Media](#media)
-   - [Acknowledgements](#acknowledgements)
 
 ---
 
-## User Experience
+# User Experience (UX)
 
-### Goals
+---
+
+## User Stories
+
+
+**Key information for the site:**
+- The restaurant’s philosophy and values
+- The current menu
+- How to book a table
+- How to contact the restaurant and view its location
+- Information about events and additional services
 
 #### Visitor Goals
 - As a first-time visitor, I want to:
-1.  Be intrigued by the restaurant and encouraged to visit or try it out
-2.  Easily navigate the website and find essential information such as opening hours and contact details
-3.  View the menu and understand the price range
-4.  Learn about the restaurant’s overall philosophy and sustainability mindset
+1.  Be intrigued by the restaurant and encouraged to visit
+2.  See images that communicate the atmosphere of the restaurant and its food
+2.  Easily navigate the website and find essential information such as opening hours, address, and contact details
+3.  View the menu to understand what type of food is served and the price range
+4.  Learn about the restaurant’s philosophy and sustainability approach
 
 - As a returning visitor, I want to:
 1. Check the daily-changing menu
-2. See upcoming events
+2. See upcoming events and information about catering or larger bookings
 3. Book a table easily
 
 #### Business Goals
 - As a buisness we want to: 
-1. Attract guests to book a table
-2. Communicate the restaurant’s concept, values, and menu
-3. Promote catering, events, and large group bookings
-4. Provide clear contact information
+1. Encourage visitors to book a table
+2. Clearly communicate the restaurant’s concept, values, and menu
+3. Promote catering, events, and group bookings
+4. Provide clear and accessible contact information
 
 ---
 
@@ -230,14 +240,18 @@ The layout adapts down to 320px without issues. The only change is that the logo
 - **Footer:** 
 
 - The footer consists of three sections: contact info, social icons, and copyright. These elements are displayed in a row on larger screens using Flexbox. 
+
 <p align="center">
 <img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
 </p>
+
 - Ideally, all elements would appear in a single row on all screens. However, to maintain accessibility and avoid reducing text size, the content is stacked vertically on smaller screens. This was not the original intention for the layout, but it was the most practical solution to keep each section readable. 
 
+
 <p align="center">
-<img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="500" heigh="auto"/>
+<img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="400" heigh="auto"/>
 </p>
+
 - Extra wrapper `<div>`: An additional `<div>` around the contact info was used to maintain even spacing and alignment. Without it, the rows appeared uneven. 
 
 - Fixed width on mobile: A width of 170px was applied to center the footer sections visually. While this limits flexibility, it was the simplest way to achieve a balanced layout on small screens. 
@@ -268,10 +282,13 @@ The layout adapts down to 320px without issues. The only change is that the logo
 3. Sustainability practices and approach
 
 - This alternating layout maintains visual interest, guides the user through the content in a natural flow, and reinforces a consistent UX pattern across the site.
+
 <p align="center">
 <img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="500" heigh="auto"/>
 </p>
+
 - On tablet and mobile viewports, the layout switches from flex-row to flex-column, stacking text and image vertically for improved readability and responsiveness. This ensures that the content remains visually balanced and accessible on smaller screens.
+
 <p align="center">
 <img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="400" heigh="auto"/>
 </p>
@@ -279,9 +296,11 @@ The layout adapts down to 320px without issues. The only change is that the logo
 #### Menu page 
 
 - The Menu page features a simple layout showcasing a fictional menu. Each menu item includes a title, a brief description, and a price. A supporting image is included to intrigue potential guests and give a visual sense of the dishes. Like other pages, the section concludes with two call-to-action buttons directing users to the Contact and Booking pages.
+
 <p align="center">
-<img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="500" heigh="auto"/>
+<img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="400" heigh="auto"/>
 </p>
+
 #### About Page
 
 - The About page contains an h1 and a `<p>` providing more detailed information about the restaurant. To make this section more engaging from a UX perspective, a supporting image is included alongside the text. Below this, call-to-action buttons guide the user to the Contact and Booking pages, encouraging further interaction.
@@ -300,11 +319,16 @@ The layout adapts down to 320px without issues. The only change is that the logo
 
 - On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. Achieving full responsiveness was slightly challenging, particularly for the map. 
 
+- The embedded Google Map (iframe) originally occupied 100% of the available width in addition to the grid gap applied to its parent container on desktop. This caused the map to slightly overflow its intended layout.
+To resolve this, the map width was set to 95% on desktop viewports, ensuring it fits correctly within the grid without overflow. On smaller screen sizes, where the grid items stack vertically, the gap is applied above the map instead of beside it. In this layout, the map no longer overflows and is therefore set to 100% width for optimal use of available space.
+This responsive adjustment provided a practical and accessible solution within the project scope. With more time, the layout could be further refined using a more flexible approach.
+
 <p align="center">
 <img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="300" heigh="auto"/>
 </p>
 
 #### Events page
+
 - The Events page provides information about larger bookings, catering options, and upcoming events such as live music nights. This page uses the same CSS classes as the homepage (index.html), which helps keep the stylesheet maintainable and the code clean.
 
 - Responsiveness: The layout follows the same responsive design and media queries as the homepage. On tablet and mobile screens, the content stacks vertically to ensure readability and a smooth user experience.
@@ -319,6 +343,7 @@ The layout adapts down to 320px without issues. The only change is that the logo
 - Originally, the booking form was included directly on the Reservations page. After reviewing other restaurant websites, I realised that it provides a better user experience to have a separate page for the booking form.
 
 - Reservations page: Provides information about making a reservation and guides the guest to the booking page if they wish to proceed.
+
 <p align="center">
 <img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
 </p>
@@ -381,6 +406,7 @@ To deploy the site, the following steps were taken:
 
 After saving, the site was automatically deployed. 
 Any subsequent pushes to the main branch will update the live site.
+The live site can be found here: link 
 
 ---
 
@@ -392,6 +418,16 @@ Any subsequent pushes to the main branch will update the live site.
 * Fewer overrides at smaller screen sizes
 * Improved responsiveness and scalability
  This project provided valuable insight into responsive design strategies and reinforced the importance of planning layout progression from smaller devices upward.
+
+### Overall layout
+* The embedded map iframe could be implemented in a more robust way to avoid layout workarounds.
+* The contact section could be further refined if more time were available. While the current layout functions well, the content could be aligned more cleanly within the grid, with improved spacing toward the container edges.
+* Footer:
+
+### Submit form
+* As this project is built using static HTML and CSS, the booking form does not process submissions in a realistic way, as this would require JavaScript or a backend solution. Currently, submitting the form simply refreshes the page.
+
+* From a user experience perspective, providing visual feedback after submission would improve usability. With more time, a separate confirmation page (e.g. confirmation.html) could be added to clearly inform users that their booking request has been sent.    
 ---
 
 ## Testing
@@ -450,6 +486,10 @@ Any subsequent pushes to the main branch will update the live site.
 | All Pages (Responsive)   | Check layout on desktop, tablet, mobile for navbar, hero, text/image sections, and footer | Layout adjusts correctly at different screen sizes                                     |
 |                          |                                            |                                              |
 
+
+- Responsiveness was altså tested manually using Chrome DevTools by simulating different screen sizes, including desktop, tablet, and mobile devices. Layouts were adjusted where needed to ensure content remained readable and functional.
+
+
 ### Known Bugs
 - 
 
@@ -458,13 +498,14 @@ Any subsequent pushes to the main branch will update the live site.
 ## Credits
 
 ### Code
-- 
+- [Tailwind CSS Documentation](https://v2.tailwindcss.com/docs) – Used during evaluation of utility-first styling
+
+- Hamburger menu toggle (JavaScript) – Inspired by a solution from [Stack Overflow](https://stackoverflow.com/questions/70384367/hamburger-menu-toggle)
+
 
 ### Content
-- 
+- ChatGPT – Used as a support tool for refining language in longer text sections.
+- README – Inspired on the Code Institute ["Love Running" README Template](https://github.com/Code-Institute-Solutions/readme-template), and examples from other student projects reviewed during course session with my Course Facilitator. 
 
 ### Media
-- 
-
-### Acknowledgements
-- 
+- [Pexels](https://www.pexels.com/) – All images and icon imagery used on the website were sourced from Pexels:
