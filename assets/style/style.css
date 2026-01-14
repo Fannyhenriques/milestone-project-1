@@ -747,6 +747,5 @@ button {
     margin: 0 auto;
     width: 170px;
     align-items: flex-start;
-    font-size: var(--font-xxs);
   }
 }
