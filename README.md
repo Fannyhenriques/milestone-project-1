@@ -8,7 +8,6 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 <img src="/assets/images/responsive-design.png" alt="responsive design" width="900"/>
 </p>
 
-[View live project here](https://fannyhenriques.github.io/milestone-project-1/)  
 
 
 
@@ -16,41 +15,49 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 
 ## Table of Contents
 1. [User Experience](#user-experience)
-   - [Goals](#goals)
+   - [User Stories](#user-stories)
      - [Visitor Goals](#visitor-goals)
      - [Business Goals](#business-goals)
 2. [Design](#design)
    - [Wireframes](#wireframes)
    - [Layout and Styling](#layout-and-styling)
+   - [Styling Process](#styling-process)
+   - [Breakpoints Overview](#breakpoints-overview)
    - [Colour Scheme](#colour-scheme)
    - [Imagery](#imagery)
    - [Typography](#typography)
-   - [Icons & Favicon](#icons--favicon)
+   - [Icons](#icons)
 3. [Features](#features)
-   - [Scope](#scope)
-     - [Minimum Viable Product](#minimum-viable-product)
-     - [Additional Features](#additional-features)
-     - [Future Ideas](#future-ideas)
    - [Page Elements](#page-elements)
      - [All Pages](#all-pages)
      - [Homepage](#homepage)
+     - [Menu Page](#menu-page)
      - [About Page](#about-page)
-     - [Booking / Form Page](#booking--form-page)
+     - [Contact Page](#contact-page)
+     - [Events Page](#events-page)
+     - [Reservations / Booking Form](#reservation--booking---form-page)
 4. [Technologies Used](#technologies-used)
    - [Languages](#languages)
-   - [Frameworks & Libraries](#frameworks--libraries)
+   - [Frameworks](#frameworks)
+   - [Libraries](#libraries)
    - [Tools & Platforms](#tools--platforms)
 5. [Development & Deployment](#development--deployment)
    - [Git Commits](#git-commits)
-   - [GitHub Pages](#github-pages)
-6. [Testing](#testing)
+   - [Publishing](#publishing)
+6. [Reflection & Future Improvements](#reflection--future-improvements)
+   - [Responsive Design](#responsive-design)
+   - [Overall Layout](#overall-layout)
+   - [Submit Form](#submit-form)
+7. [Testing](#testing)
    - [Validation](#validation)
    - [Manual Testing](#manual-testing)
+   - [Lighthouse Testing](#lighthouse-testing)
    - [Known Bugs](#known-bugs)
-7. [Credits](#credits)
+8. [Credits](#credits)
    - [Code](#code)
    - [Content](#content)
    - [Media](#media)
+
 
 ---
 
@@ -82,7 +89,7 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 3. Book a table easily
 
 #### Business Goals
-- As a buisness we want to: 
+- As a business we want to: 
 1. Encourage visitors to book a table
 2. Clearly communicate the restaurant’s concept, values, and menu
 3. Promote catering, events, and group bookings
@@ -344,7 +351,7 @@ This responsive adjustment provided a practical and accessible solution within t
 </p>
 
 
-#### Reservation / Booking - Form Page
+#### "Reservations / Booking Form
 
 - Originally, the booking form was included directly on the Reservations page. After reviewing other restaurant websites, I realised that it provides a better user experience to have a separate page for the booking form.
 
@@ -506,13 +513,13 @@ These elements were replaced with `<div>` where appropriate to better reflect th
 |                          |                                            |                                              |
 
 
-- Responsiveness was altså tested manually using [Chrome DevTools](https://developer.chrome.com/docs/devtools/) by simulating different screen sizes, including desktop, tablet, and mobile devices. Layouts were adjusted where needed to ensure content remained readable and functional. In addition, [Responsive Design Checker](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html&width=1400&height=700) was used to further verify responsive behavior across a wide range of screen sizes.
+- Responsiveness was tested manually using [Chrome DevTools](https://developer.chrome.com/docs/devtools/) by simulating different screen sizes, including desktop, tablet, and mobile devices. Layouts were adjusted where needed to ensure content remained readable and functional. In addition, [Responsive Design Checker](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html&width=1400&height=700) was used to further verify responsive behavior across a wide range of screen sizes.
 
 ### Lighthouse Testing 
 
 All pages of the website have been tested using Google Lighthouse. The project achieves 100% Accessibility, 100% Best Practices, and 100% SEO across all pages.
 
-**Performace score**
+**Performance score**
 - The Performance score varies between Lighthouse runs due to factors such as network simulation, CPU throttling, browser extensions, and background processes. To reduce variability, tests were primarily conducted in Incognito mode, which provided more consistent results; however, the performance score still fluctuates between runs and may produce different results each time the test is executed.
 
 - Lower performance scores are mainly caused by large image assets, particularly on index.html, where a full-width hero image is used. Due to its size and importance, this image takes longer to load under simulated mobile conditions. To improve loading behavior, fetchpriority="high" was applied to the hero image, resulting in a modest performance improvement. Smaller, non-critical images (such as footer icons) use loading="lazy" to improve load performance.
