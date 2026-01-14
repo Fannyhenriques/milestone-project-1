@@ -446,6 +446,18 @@ The live site can be found here: link
 
 ### Validation
 
+- During HTML validation, a few warnings related to semantic structure were identified. 
+These mainly concerned the use of `<section>` elements that were used purely as layout wrappers and did not require headings. 
+These elements were replaced with `<div>` where appropriate to better reflect their purpose.
+
+- Additionally, some heading levels were adjusted (e.g. replacing `<h3>` with `<h2>` in the menu page) to maintain a logical heading hierarchy. Existing CSS styling was preserved to ensure the visual design remained unchanged.
+
+- After these adjustments, all HTML validator tests passed successfully.
+
+- All CSS validation tests passed successfully without errors.
+
+
+
 | **Page**          | **W3C HTML Validator Result** | **Link**                                                                                                                       |
 | ----------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Index.html        | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html)        |
@@ -457,7 +469,6 @@ The live site can be found here: link
 | Book.html         | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fbook.html)         |
 
 
-- 
 
 | **Page**          | **W3C CSS Validator Result** | **Link**                                                                                                                                     
 | ----------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
