@@ -385,6 +385,8 @@ This responsive adjustment provided a practical and accessible solution within t
 - GitHub – used to host the project repository and deploy the site via GitHub Pages
 - Visual Studio Code – used as the code editor during development
 - Chrome DevTools – used for debugging, testing responsiveness, and troubleshooting layout issues
+- Responsive Design Checker (cross-device responsiveness testing)
+- Google Lighthouse (performance, accessibility, best practices, SEO)
 - W3C HTML Validator – for HTML-validation
 - W3C CSS Validator - for CSS validation 
 
@@ -502,9 +504,62 @@ These elements were replaced with `<div>` where appropriate to better reflect th
 |                          |                                            |                                              |
 
 
-- Responsiveness was altså tested manually using Chrome DevTools by simulating different screen sizes, including desktop, tablet, and mobile devices. Layouts were adjusted where needed to ensure content remained readable and functional.
-And: https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html&width=1400&height=700
+- Responsiveness was altså tested manually using [Chrome DevTools](https://developer.chrome.com/docs/devtools/) by simulating different screen sizes, including desktop, tablet, and mobile devices. Layouts were adjusted where needed to ensure content remained readable and functional. In addition, [Responsive Design Checker](https://responsivedesignchecker.com/checker.php?url=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html&width=1400&height=700) was used to further verify responsive behavior across a wide range of screen sizes.
 
+### Lighthouse Testing 
+
+All pages of the website have been tested using Google Lighthouse. The project achieves 100% Accessibility, 100% Best Practices, and 100% SEO across all pages.
+
+**Performace score**
+- The Performance score varies between Lighthouse runs due to factors such as network simulation, CPU throttling, browser extensions, and background processes. To reduce variability, tests were primarily conducted in Incognito mode, which provided more consistent results; however, the performance score still fluctuates between runs and may produce different results each time the test is executed.
+
+- Lower performance scores are mainly caused by large image assets, particularly on index.html, where a full-width hero image is used. Due to its size and importance, this image takes longer to load under simulated mobile conditions. To improve loading behavior, fetchpriority="high" was applied to the hero image, resulting in a modest performance improvement. Smaller, non-critical images (such as footer icons) use loading="lazy" to improve load performance.
+
+- Several image optimization approaches were tested, including resizing, cropping, and adjusting image dimensions directly in HTML. However, these negatively affected responsiveness, visual quality, or overall user experience. To preserve a high-quality UI/UX, the images were kept in their current form.
+
+- With more time available, further image optimization (such as manual resizing or responsive image formats) would be implemented to improve performance while maintaining visual integrity.
+
+Index.html:
+
+<p align="center">
+<img src="/assets/images/lighthouse-index.png" alt="lighthouse scores homepage" width="400" heigh="auto"/>
+</p>
+
+Menu.html:
+
+<p align="center">
+<img src="/assets/images/lighthouse-menu.png" alt="lighthouse scores menu page" width="400" heigh="auto"/>
+</p>
+
+About.html: 
+
+<p align="center">
+<img src="/assets/images/lighthouse-about.png" alt="lighthouse scores about page" width="400" heigh="auto"/>
+</p>
+
+Contact.html: 
+
+<p align="center">
+<img src="/assets/images/lighthouse-contact.png" alt="lighthouse scores contactpage" width="400" heigh="auto"/>
+</p>
+
+Events.html:
+
+<p align="center">
+<img src="/assets/images/lighhouse-events.png" alt="lighthouse scores event page" width="400" heigh="auto"/>
+</p>
+
+Reservations.html:
+
+<p align="center">
+<img src="/assets/images/lighthouse-reservations.png" alt="lighthouse scores reservation page" width="400" heigh="auto"/>
+</p>
+
+Book.html:
+
+<p align="center">
+<img src="/assets/images/lighthouse-book.png" alt="lighthouse scores bookingpage" width="400" heigh="auto"/>
+</p>
 
 ### Known Bugs
 - 
