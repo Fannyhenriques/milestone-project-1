@@ -192,6 +192,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 ### Typography
 - The website uses a single font family from Google Fonts: [Hepta Slab](https://fonts.google.com/specimen/Hepta+Slab), applied consistently across all pages to maintain a cohesive visual style. Different font sizes and weights are used to create hierarchy and visual interest.
+
 **Header / Navbar:**
 -  The logo in the header is styled with the same font, but with a playful variation in font size to emphasize part of the word: hospiTABLE. This highlights the "table" in hospitable, fitting the restaurant theme.
 <p align="center">
@@ -232,25 +233,42 @@ This structure ensures that visitors can easily navigate the site and access the
 
 #### All Pages
 
-- **Navigation:**
+**Navigation:**
 
 -  A navbar is present on all pages, including book.html, with sticky positioning to remain easily accessible when scrolling.
 
-On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
+- On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
 
 <p align="center">
 <img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="900" heigh="auto"/>
 </p>
 
-To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets.
+- To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets. A small JavaScript snippet was implemented to toggle the visibility of the navbar. When the menu icon is clicked, the script adds or removes the hidden class from the navigation menu. This allows the menu to fold out from the top of the screen, centering the links and maintaining a clean, accessible interface.
 
 <p align="center">
 <img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
 </p>
 
-The layout adapts down to 320px without issues. The only change is that the logo switches font and becomes smaller to fit smaller screens. 
+- The layout adapts down to 320px without issues. The only change is that the logo switches fontsize and becomes smaller to fit smaller screens. 
 
-- **Footer:** 
+**Buttons**
+- The site uses a combination of links and buttons to navigate the user and perform actions, such as submitting the booking form. All buttons and link-buttons are styled consistently to maintain a cohesive and interactive feel. Two main button styles are used:
+
+1. Primary buttons: These stand out with the primary color as background and are used for key actions, such as the call-to-action buttons on the hero image.
+
+<p align="center">
+<img src="/assets/images/button-primary.png" alt="Button Pirmary screenshot" width="700" heigh="auto"/>
+</p>
+
+2. Secondary buttons: These have the base color as background and a border in the primary color, making them less visually dominant. They are used for supporting actions, such as buttons under text sections on the Events page.
+
+<p align="center">
+<img src="/assets/images/button-secondary.png" alt="Button Secondary screenshot" width="700" heigh="auto"/>
+</p>
+
+This approach ensures visual hierarchy and guides users attention while keeping the site playful and engaging.
+
+**Footer:** 
 
 - The footer consists of three sections: contact info, social icons, and copyright. These elements are displayed in a row on larger screens using Flexbox. 
 
