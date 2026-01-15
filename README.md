@@ -249,6 +249,8 @@ This structure aims to ensure that visitors can easily navigate the site and acc
 
 - To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets. A small JavaScript snippet was implemented to toggle the visibility of the navbar. When the menu icon is clicked, the script adds or removes the hidden class from the navigation menu. This allows the menu to fold out from the top of the screen, centering the links and maintaining a clean, accessible interface.
 
+- The hamburger button includes appropriate ARIA attributes, such as aria-label and aria-expanded, to support screen reader users. The use of aria-expanded is based on guidance from the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded?) and indicates whether the navigation menu is currently expanded or collapsed.
+
 <p align="center">
 <img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
 </p>
@@ -607,6 +609,8 @@ Book.html:
 - Floating footer solution - Inspired by [CSS-Tricks](https://css-tricks.com/couple-takes-sticky-footer/)
 
 - Hamburger menu toggle (JavaScript) – Inspired by a solution from [Stack Overflow](https://stackoverflow.com/questions/70384367/hamburger-menu-toggle)
+
+- Aria Attributes for hamburger menu - Documentation from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded?) 
 
 
 ### Content
