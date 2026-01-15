@@ -18,6 +18,10 @@
   --spacing-xl: 4rem;
   --spacing-xxl: 6rem;
 
+  /* HEADER HEIGHT (used for fixed header offset) */
+  --header-height: 5rem;
+  --header-height-sm: 3.75rem;
+
   /* FONT-SIZE */
   --font-xxs: 0.9rem;
   --font-xs: 1rem;
@@ -49,10 +53,17 @@ body {
 
 main {
   flex: 1;
+  padding-top: var(--header-height);
 }
 
 img {
   max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding-top: var(--header-height-sm);
+  }
 }
 
 /* =====================
@@ -148,7 +159,8 @@ a {
 }
 
 header {
-  position: sticky;
+  width: 100%;
+  position: fixed;
   top: 0;
   z-index: 100;
   background-color: var(--color-background);

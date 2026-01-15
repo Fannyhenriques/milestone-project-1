@@ -52,6 +52,7 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
    - [Validation](#validation)
    - [Manual Testing](#manual-testing)
    - [Lighthouse Testing](#lighthouse-testing)
+   - [Cross-browser testing](#cross-browser-testing)
    - [Known Bugs](#known-bugs)
 8. [Credits](#credits)
    - [Code](#code)
@@ -239,7 +240,7 @@ This structure aims to ensure that visitors can easily navigate the site and acc
 
 **Navigation:**
 
--  A navbar is present on all pages, including book.html, with sticky positioning to remain easily accessible when scrolling.
+-  A navbar is present on all pages, including book.html, with fixed positioning to remain easily accessible when scrolling.
 
 - On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
 
@@ -599,6 +600,17 @@ Book.html:
 <p align="center">
 <img src="/assets/images/lighthouse-book.png" alt="lighthouse scores bookingpage" width="400" heigh="auto"/>
 </p>
+
+### Cross-browser testing
+
+- Due to hardware limitations, full cross-browser testing was not possible. 
+The project was primarily tested on macOS (Safari, Chrome and Firefox), where no bugs were found.
+
+**Header positioning**
+- The header was initially implemented using position: sticky.
+- During mentor review on Windows (Chrome), an issue was identified where position: sticky did not behave as expected.
+- This was caused by the flex-based layout applied to the body, which was implemented to solve the floating footer. In Chrome on Windows, this caused the sticky positioning of the header to be affected by its parent container.
+- To ensure consistent behavior across platforms, the header was changed to position: fixed, and compensating padding was added to the main element using custom CSS variables for different breakpoints.
 
 ### Known Bugs
 - 
