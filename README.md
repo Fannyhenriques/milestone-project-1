@@ -366,6 +366,8 @@ This responsive adjustment provided a practical and accessible solution within t
 <img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="300" heigh="auto"/>
 </p>
 
+- Accessibility considerations: The contact information is wrapped in a semantic `<address>` element, with phone and email links using tel: and mailto: for easy access. The embedded Google Map `<iframe>` includes a descriptive title to assist screen readers. Section headings use aria-labels to provide additional context for screen reader users.
+
 #### Events page
 
 - The Events page provides information about larger bookings, catering options, and upcoming events such as live music nights. This page uses the same CSS classes as the homepage (index.html), which helps keep the stylesheet maintainable and the code clean.
@@ -377,7 +379,7 @@ This responsive adjustment provided a practical and accessible solution within t
 </p>
 
 
-#### "Reservations / Booking Form
+#### Reservations / Booking Form
 
 - Originally, the booking form was included directly on the Reservations page. After reviewing other restaurant websites, I realised that it provides a better user experience to have a separate page for the booking form.
 
