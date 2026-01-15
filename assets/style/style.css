@@ -1,8 +1,8 @@
 /* =====================
    ROOT / VARIABLES
 ===================== */
-
 :root {
+  /* COLORS */
   --color-background: rgb(12, 12, 12);
   --color-primary: rgba(196, 156, 64, 1);
   --color-primary-hover: #edc193;
@@ -60,7 +60,6 @@ img {
 ===================== */
 h1,
 h2,
-h3,
 p {
   color: var(--color-secondary);
   line-height: 1.6;
@@ -77,11 +76,6 @@ h2 {
   font-size: var(--font-md);
   font-weight: 200;
   margin-bottom: var(--spacing-s);
-}
-
-h3 {
-  font-size: var(--font-s);
-  font-weight: 100;
 }
 
 p {
@@ -415,6 +409,7 @@ button {
   padding: var(--spacing-xl) var(--spacing-md);
 }
 
+/* Semantically h2, visually styled as subheading */
 .menu-section h2 {
   text-align: left;
   font-size: var(--font-s);
