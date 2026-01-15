@@ -407,9 +407,9 @@ This responsive adjustment provided a practical and accessible solution within t
 ## Technologies Used
 
 ### Languages 
-- HTML
-- CSS
-- Javascript - for hamburger menu
+- HTML – for structuring content and pages
+- CSS – for styling, layout, typography, colors, and responsiveness
+- JavaScript – for the hamburger menu
 
 ### Frameworks 
 - Tailwind – Evaluated during development for utility-first styling, but not used in the final site.
