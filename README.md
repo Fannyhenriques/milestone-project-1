@@ -188,6 +188,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 <p align="center">
 <img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-screenshot" width="600" heigh="auto"/>
 </p>
+
 - All images are responsive and automatically cropped or scaled to fit different screen sizes and layouts, ensuring a consistent visual flow throughout the site.
 
 ### Typography
@@ -198,11 +199,13 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 <p align="center">
 <img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="900" heigh="auto"/>
 </p>
+
 **Body text:**
 -  All other text uses the same font with adjusted letter-spacing for readability and a more open, airy layout.
 <p align="center">
 <img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="400"/>
 </p>
+
 ### Icons
 - The website uses clickable social media icons in the footer to link to Instagram, Facebook, and Tripadvisor, which are relevant platforms for a restaurant.
 
@@ -210,7 +213,8 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 <p align="center">
 <img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="350" heigh="auto"/>
 </p>
-- To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for all users.
+
+- To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for users.
 
 ---
 
@@ -227,7 +231,7 @@ The website consists of seven pages, six of which are accessible via the navigat
 7. **Book:** The booking page where guests can submit a reservation form, accessed via the Reservations page.
 
 
-This structure ensures that visitors can easily navigate the site and access the information most relevant to their needs.
+This structure aims to ensure that visitors can easily navigate the site and access the information most relevant to their needs.
 
 ### Page Elements
 
@@ -266,11 +270,13 @@ This structure ensures that visitors can easily navigate the site and access the
 <img src="/assets/images/button-secondary.png" alt="Button Secondary screenshot" width="700" heigh="auto"/>
 </p>
 
-This approach ensures visual hierarchy and guides users attention while keeping the site playful and engaging.
+This approach aims to ensure visual hierarchy and guides users attention while keeping the site playful and engaging.
 
 **Footer:** 
 
 - The footer consists of three sections: contact info, social icons, and copyright. These elements are displayed in a row on larger screens using Flexbox. 
+
+- Originally, there was an issue with a floating footer on larger screens, especially on reservations.html, since the page had very little content in `<main>`. A solution to keep the footer at the bottom of the page was applied by setting display:flex on the the `<body>` and flex: 1 to `<main>`, inspired by [CSS-Tricks](https://css-tricks.com/couple-takes-sticky-footer/).
 
 <p align="center">
 <img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
@@ -305,7 +311,7 @@ This approach ensures visual hierarchy and guides users attention while keeping 
 
 **Feature Sections**
 
-- The page includes a reusable styling section, also used on the Events page. These sections are arranged in alternating layouts using Flexbox: Text/Image → Image/Text → Text/Image
+- The page includes a reusable styling section, also used on the Events page. These sections are arranged in alternating layouts using Flexbox, switching between row and row-reverse to create a Text/Image → Image/Text → Text/Image pattern.
 
 - Each section contains a short summary of different aspects of the restaurant, such as:
 1. The restaurant’s philosophy and atmosphere
@@ -348,7 +354,7 @@ This approach ensures visual hierarchy and guides users attention while keeping 
 <img src="/assets/images/contact-desktop.png" alt="contact page desktop screenshot" width="500" heigh="auto"/>
 </p>
 
-- On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. Achieving full responsiveness was slightly challenging, particularly for the map. 
+- On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. 
 
 - The embedded Google Map (iframe) originally occupied 100% of the available width in addition to the grid gap applied to its parent container on desktop. This caused the map to slightly overflow its intended layout.
 To resolve this, the map width was set to 95% on desktop viewports, ensuring it fits correctly within the grid without overflow. On smaller screen sizes, where the grid items stack vertically, the gap is applied above the map instead of beside it. In this layout, the map no longer overflows and is therefore set to 100% width for optimal use of available space.
@@ -379,7 +385,7 @@ This responsive adjustment provided a practical and accessible solution within t
 <img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
 </p>
 
--Booking page (book.html): Contains the booking form, which includes:
+- Booking page (book.html): Contains the booking form, which includes:
 * Radio buttons to choose Lunch or Dinner
 * A date picker for selecting the reservation date
 * A number input to select the number of guests (up to 7)
@@ -439,7 +445,7 @@ To deploy the site, the following steps were taken:
 
 After saving, the site was automatically deployed. 
 Any subsequent pushes to the main branch will update the live site.
-The live site can be found here: link 
+The live site can be found [here:](https://fannyhenriques.github.io/milestone-project-1/)  
 
 ---
 
@@ -597,6 +603,8 @@ Book.html:
 
 ### Code
 - [Tailwind CSS Documentation](https://v2.tailwindcss.com/docs) – Used during evaluation of utility-first styling
+
+- Floating footer solution - Inspired by [CSS-Tricks](https://css-tricks.com/couple-takes-sticky-footer/)
 
 - Hamburger menu toggle (JavaScript) – Inspired by a solution from [Stack Overflow](https://stackoverflow.com/questions/70384367/hamburger-menu-toggle)
 
