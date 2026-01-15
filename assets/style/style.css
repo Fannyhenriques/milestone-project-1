@@ -474,6 +474,7 @@ button {
 
   .menu-item-price {
     margin: 0;
+    letter-spacing: 0.1rem;
   }
 }
 
