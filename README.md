@@ -431,7 +431,7 @@ This responsive adjustment provided a practical and accessible solution within t
 
 ### Git Commits
 
-During development, I aimed to commit frequently with clear and concise commit messages that describe the changes made. The goal was to keep the commit history easy to follow and understandable for others reviewing the project.
+During development, I aimed to commit frequently with clear and concise commit messages that describe the changes made. The goal was to keep the commit history easy to follow and understandable for others reviewing the project. However, early in the project, some commits included larger chunks of work, as I was still establishing a workflow. As development progressed, I adopted a more consistent approach, which was also helpful for me personally to clearly track what I had done and when.
 
 ### Publishing
 
