@@ -217,7 +217,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 <img src="/documentation/icons-screenshot.png" alt="icons screenshot" width="350" heigh="auto"/>
 </p>
 
-- To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for users.
+- To ensure accessibility, each icon has descriptive aria labels and alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for users.
 
 ---
 
@@ -232,6 +232,7 @@ The website consists of seven pages, six of which are accessible via the navigat
 5. **Contact:** Contains the restaurant’s address, opening hours, and an embedded map for easy location.
 6. **Reservations:** Provides basic information and a button to navigate to the booking page (book.html).
 7. **Book:** The booking page where guests can submit a reservation form, accessed via the Reservations page.
+8. **Confirmation:** A confirmation page with a message that the booking was successful, accessed via the booking form in book.html.
 
 
 This structure aims to ensure that visitors can easily navigate the site and access the information most relevant to their needs.
@@ -362,7 +363,8 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. 
 
 - The embedded Google Map (iframe) originally occupied 100% of the available width in addition to the grid gap applied to its parent container on desktop. This caused the map to slightly overflow its intended layout.
-To resolve this, the map width was set to 95% on desktop viewports, ensuring it fits correctly within the grid without overflow. On smaller screen sizes, where the grid items stack vertically, the gap is applied above the map instead of beside it. In this layout, the map no longer overflows and is therefore set to 100% width for optimal use of available space.
+To resolve this, the map width was set to 95% on desktop viewports, ensuring it fits correctly within the grid without overflow. 
+- On smaller screen sizes, where the grid items stack vertically, the gap is applied above the map instead of beside it. In this layout, the map no longer overflows and is therefore set to 100% width for optimal use of available space.
 This responsive adjustment provided a practical and accessible solution within the project scope. With more time, the layout could be further refined using a more flexible approach.
 
 <p align="center">
@@ -476,7 +478,7 @@ The live site can be found [here:](https://fannyhenriques.github.io/milestone-pr
 ### Overall layout
 * The embedded map iframe could be implemented in a more robust way to avoid layout workarounds.
 * The contact section could be further refined if more time were available. While the current layout functions well, the content could be aligned more cleanly within the grid, with improved spacing toward the container edges.
-* Footer:
+* Footer: A fixed width was used to visually center the footer content on small screens. While effective, this is not the most flexible solution. In the future, the layout could be improved using CSS Grid or a more responsive approach to achieve the same balance in a cleaner way.
 
 ### Booking & submit form
 * Currently, the booking form accepts all dates from 16/01/2026 onward because JavaScript is not implemented. This means users could technically select past dates. In the future, it would be ideal to add JavaScript to dynamically check the current date and restrict bookings to future dates only.
@@ -505,8 +507,6 @@ These elements were replaced with `<div>` where appropriate to better reflect th
 
 - After these adjustments, all HTML validator tests passed successfully.
 
-- All CSS validation tests passed successfully without errors.
-
 
 
 | **Page**              | **W3C HTML Validator Result** | **Link**                                                                                                                       |
@@ -520,6 +520,9 @@ These elements were replaced with `<div>` where appropriate to better reflect th
 | Book.html             | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fbook.html)         |
 | Confirmation.html     | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fconfirmation.html) |
 |                                             |         |                                                                        |
+
+
+- All CSS validation tests passed successfully without errors.
 
 
 
