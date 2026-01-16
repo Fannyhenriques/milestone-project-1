@@ -610,6 +610,12 @@ Book.html:
 <img src="/documentation/lighthouse-book.png" alt="lighthouse scores bookingpage" width="400" heigh="auto"/>
 </p>
 
+Confirmation.html:
+
+<p align="center">
+<img src="/documentation/lighthouse-confirmation.png" alt="lighthouse scores confirmationpage" width="400" heigh="auto"/>
+</p>
+
 ### Cross-browser testing
 
 - Due to hardware limitations, full cross-browser testing was not possible. 
