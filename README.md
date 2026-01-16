@@ -5,7 +5,7 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 
 
 <p align="center">
-<img src="/assets/images/responsive-design.png" alt="responsive design" width="900"/>
+<img src="/documentation/responsive-design.png" alt="responsive design" width="900"/>
 </p>
 
 
@@ -105,9 +105,9 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 - A basic overall layout of the homepage was created using the Lucidchart app, outlining the structure and alignment of the header, main content, and footer.
 
 <div style="display: flex; gap: 10px; align-items: flex-start;"> 
-<img src="/assets/images/lucid-print-desktop.png" alt="Desktop" width="300"/>
-<img src="/assets/images/lucid-printscreen-tablet.png" alt="Tablet" width="200"/>
-<img src="/assets/images/lucid-printscreen-mobile-png.png" alt="Mobile" width="100"/>
+<img src="/documentation/lucid-print-desktop.png" alt="Desktop" width="300"/>
+<img src="/documentation/lucid-printscreen-tablet.png" alt="Tablet" width="200"/>
+<img src="/documentation/lucid-printscreen-mobile.png" alt="Mobile" width="100"/>
 </div>
 
 ### Layout and Styling
@@ -154,7 +154,7 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
 This approach was chosen to maintain visual clarity, avoid a cluttered interface, and create a cohesive user experience.
 
 <p align="center">
-<img src="/assets/images/color-scheme.png" alt="Color-scheme" width="700" heigh="auto"/>
+<img src="/documentation/color-scheme.png" alt="Color-scheme" width="700" heigh="auto"/>
 </p>
 
 - The colour variables were defined using CSS custom properties:
@@ -188,7 +188,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 - The homepage features a full-width hero image designed to welcome visitors and set the mood. Other images accompany text blocks on the homepage, About, Menu, and Events pages, providing context and visual interest for each section.
 <p align="center">
-<img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-screenshot" width="600" heigh="auto"/>
+<img src="/assets/images/restaurant-bar.jpg" alt="Home-page hero-image" width="600" heigh="auto"/>
 </p>
 
 - All images are responsive and automatically cropped or scaled to fit different screen sizes and layouts, ensuring a consistent visual flow throughout the site.
@@ -199,13 +199,13 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 **Header / Navbar:**
 -  The logo in the header is styled with the same font, but with a playful variation in font size to emphasize part of the word: hospiTABLE. This highlights the "table" in hospitable, fitting the restaurant theme.
 <p align="center">
-<img src="/assets/images/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="900" heigh="auto"/>
+<img src="/documentation/navbar-printscreen-typo.png" alt="home-page navbar screenshot" width="900" heigh="auto"/>
 </p>
 
 **Body text:**
 -  All other text uses the same font with adjusted letter-spacing for readability and a more open, airy layout.
 <p align="center">
-<img src="/assets/images/text-printscreen-typo.png" alt="typography text screenshot" width="400"/>
+<img src="/documentation/text-printscreen-typo.png" alt="typography text screenshot" width="400"/>
 </p>
 
 ### Icons
@@ -213,7 +213,7 @@ This approach was chosen to maintain visual clarity, avoid a cluttered interface
 
 - Instead of using vector icons or an icon library, these icons were sourced as images from Pexels and wrapped in anchor (`<a>`) elements. The original images were black, but to match the overall design, a CSS invert filter was applied to make them white. This approach was chosen to maintain visual consistency with the website’s style.
 <p align="center">
-<img src="/assets/images/icons-screenshot.png" alt="icons screenshot" width="350" heigh="auto"/>
+<img src="/documentation/icons-screenshot.png" alt="icons screenshot" width="350" heigh="auto"/>
 </p>
 
 - To ensure accessibility, each icon has descriptive alt text (e.g., “Instagram icon”), so screen readers can correctly identify them as interactive elements. Although they are not traditional icon fonts, this solution provides both usability and clarity for users.
@@ -246,7 +246,7 @@ This structure aims to ensure that visitors can easily navigate the site and acc
 - On desktop, the logo is positioned on the left and navigation links on the right, with Reservations highlighted using a border to clearly indicate where users can book a table.
 
 <p align="center">
-<img src="/assets/images/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="900" heigh="auto"/>
+<img src="/documentation/navbar-printscreen-typo.png" alt="Navbar desktop screenshot" width="900" heigh="auto"/>
 </p>
 
 - To improve user experience and prevent the navbar from becoming overcrowded, the navigation menu transforms into a hamburger menu on smaller desktops and tablets. A small JavaScript snippet was implemented to toggle the visibility of the navbar. When the menu icon is clicked, the script adds or removes the hidden class from the navigation menu. This allows the menu to fold out from the top of the screen, centering the links and maintaining a clean, accessible interface.
@@ -254,7 +254,7 @@ This structure aims to ensure that visitors can easily navigate the site and acc
 - The hamburger button includes appropriate ARIA attributes, such as aria-label and aria-expanded, to support screen reader users. The use of aria-expanded is based on guidance from the [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded?) and indicates whether the navigation menu is currently expanded or collapsed.
 
 <p align="center">
-<img src="/assets/images/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
+<img src="/documentation/nav-hamburger-screenshot.png" alt="Navbar hamburger screenshot" width="700" heigh="auto"/>
 </p>
 
 - The layout adapts down to 320px without issues. The only change is that the logo switches fontsize and becomes smaller to fit smaller screens. 
@@ -265,13 +265,13 @@ This structure aims to ensure that visitors can easily navigate the site and acc
 1. Primary buttons: These stand out with the primary color as background and are used for key actions, such as the call-to-action buttons on the hero image.
 
 <p align="center">
-<img src="/assets/images/button-primary.png" alt="Button Pirmary screenshot" width="700" heigh="auto"/>
+<img src="/documentation/button-primary.png" alt="Button Pirmary screenshot" width="700" heigh="auto"/>
 </p>
 
 2. Secondary buttons: These have the base color as background and a border in the primary color, making them less visually dominant. They are used for supporting actions, such as buttons under text sections on the Events page.
 
 <p align="center">
-<img src="/assets/images/button-secondary.png" alt="Button Secondary screenshot" width="700" heigh="auto"/>
+<img src="/documentation/button-secondary.png" alt="Button Secondary screenshot" width="700" heigh="auto"/>
 </p>
 
 This approach aims to ensure visual hierarchy and guides users attention while keeping the site playful and engaging.
@@ -283,14 +283,14 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - Originally, there was an issue with a floating footer on larger screens, especially on reservations.html, since the page had very little content in `<main>`. A solution to keep the footer at the bottom of the page was applied by setting display:flex on the the `<body>` and flex: 1 to `<main>`, inspired by [CSS-Tricks](https://css-tricks.com/couple-takes-sticky-footer/).
 
 <p align="center">
-<img src="/assets/images/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
+<img src="/documentation/footer-desktop-screenshot.png" alt="footer desktop screenshot" width="700" heigh="auto"/>
 </p>
 
 - Ideally, all elements would appear in a single row on all screens. However, to maintain accessibility and avoid reducing text size, the content is stacked vertically on smaller screens. This was not the original intention for the layout, but it was the most practical solution to keep each section readable. 
 
 
 <p align="center">
-<img src="/assets/images/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="400" heigh="auto"/>
+<img src="/documentation/footer-mobile-screenshot.png" alt="footer mobile screenshot" width="400" heigh="auto"/>
 </p>
 
 - Extra wrapper `<div>`: An additional `<div>` around the contact info was used to maintain even spacing and alignment. Without it, the rows appeared uneven. 
@@ -310,7 +310,7 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - Below the hero image, there is a short descriptive message, giving a concise overview of the restaurant and what it offers. This section helps fulfill the primary goal of informing first-time visitors about the restaurant.
 
 <p align="center">
-<img src="/assets/images/hero-img-screenshot.png" alt="hero screenshot desktop" width="700" heigh="auto"/>
+<img src="/documentation/hero-img-screenshot.png" alt="hero screenshot desktop" width="700" heigh="auto"/>
 </p>
 
 **Feature Sections**
@@ -325,13 +325,13 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - This alternating layout maintains visual interest, guides the user through the content in a natural flow, and reinforces a consistent UX pattern across the site.
 
 <p align="center">
-<img src="/assets/images/intro-section-desktop.png" alt="intro screenshot desktop" width="500" heigh="auto"/>
+<img src="/documentation/intro-section-desktop.png" alt="intro screenshot desktop" width="500" heigh="auto"/>
 </p>
 
 - On tablet and mobile viewports, the layout switches from flex-row to flex-column, stacking text and image vertically for improved readability and responsiveness. This ensures that the content remains visually balanced and accessible on smaller screens.
 
 <p align="center">
-<img src="/assets/images/intro-section-mobile.png" alt="intro screenshot desktop" width="400" heigh="auto"/>
+<img src="/documentation/intro-section-mobile.png" alt="intro screenshot mobile" width="400" heigh="auto"/>
 </p>
 
 #### Menu page 
@@ -339,7 +339,7 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - The Menu page features a simple layout showcasing a fictional menu. Each menu item includes a title, a brief description, and a price. A supporting image is included to intrigue potential guests and give a visual sense of the dishes. Like other pages, the section concludes with two call-to-action buttons directing users to the Contact and Booking pages.
 
 <p align="center">
-<img src="/assets/images/menu-screenshot.png" alt="menu page screenshot" width="400" heigh="auto"/>
+<img src="/documentation/menu-screenshot.png" alt="menu page screenshot" width="400" heigh="auto"/>
 </p>
 
 #### About Page
@@ -347,7 +347,7 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - The About page contains an h1 and a `<p>` providing more detailed information about the restaurant. To make this section more engaging from a UX perspective, a supporting image is included alongside the text. Below this, call-to-action buttons guide the user to the Contact and Booking pages, encouraging further interaction.
 
 <p align="center">
-<img src="/assets/images/about-screenshot.png" alt="about page screenshot" width="500" heigh="auto"/>
+<img src="/documentation/about-screenshot.png" alt="about page screenshot" width="500" heigh="auto"/>
 </p>
 
 #### contact page
@@ -355,7 +355,7 @@ This approach aims to ensure visual hierarchy and guides users attention while k
 - The Contact page is divided into three main sections: contact information (address, phone, email), opening hours, and an embedded Google map. These sections are arranged using CSS Grid, each taking up one fraction of the grid, with the map spanning two columns at the bottom to use the full width of the container.
 
 <p align="center">
-<img src="/assets/images/contact-desktop.png" alt="contact page desktop screenshot" width="500" heigh="auto"/>
+<img src="/documentation/contact-desktop.png" alt="contact page desktop screenshot" width="500" heigh="auto"/>
 </p>
 
 - On tablet and mobile screens, the sections are stacked vertically to ensure readability and accessibility. 
@@ -365,7 +365,7 @@ To resolve this, the map width was set to 95% on desktop viewports, ensuring it 
 This responsive adjustment provided a practical and accessible solution within the project scope. With more time, the layout could be further refined using a more flexible approach.
 
 <p align="center">
-<img src="/assets/images/contact-mobile.png" alt="contact page mobile screenshot" width="300" heigh="auto"/>
+<img src="/documentation/contact-mobile.png" alt="contact page mobile screenshot" width="300" heigh="auto"/>
 </p>
 
 - Accessibility considerations: The contact information is wrapped in a semantic `<address>` element, with phone and email links using tel: and mailto: for easy access. The embedded Google Map `<iframe>` includes a descriptive title to assist screen readers. Section headings use aria-labels to provide additional context for screen reader users.
@@ -377,7 +377,7 @@ This responsive adjustment provided a practical and accessible solution within t
 - Responsiveness: The layout follows the same responsive design and media queries as the homepage. On tablet and mobile screens, the content stacks vertically to ensure readability and a smooth user experience.
 
 <p align="center">
-<img src="/assets/images/events desktop.png" alt="event page mobile screenshot" width="500" heigh="auto"/>
+<img src="/documentation/events desktop.png" alt="event page desktop screenshot" width="500" heigh="auto"/>
 </p>
 
 
@@ -388,7 +388,7 @@ This responsive adjustment provided a practical and accessible solution within t
 - Reservations page: Provides information about making a reservation and guides the guest to the booking page if they wish to proceed.
 
 <p align="center">
-<img src="/assets/images/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
+<img src="/documentation/reservation-page.png" alt="reservation page screenshot" width="600" heigh="auto"/>
 </p>
 
 - Booking page (book.html): Contains the booking form, which includes:
@@ -398,7 +398,7 @@ This responsive adjustment provided a practical and accessible solution within t
 * Text inputs for first name, last name, and email address
 
 <p align="center">
-<img src="/assets/images/booking-form.png" alt="booking form screenshot" width="500" heigh="auto"/>
+<img src="/documentation/booking-form.png" alt="booking form screenshot" width="500" heigh="auto"/>
 </p>
 
 - The reservation form uses a `<fieldset>` with a `<legend>` for the radio button group to ensure semantic grouping and accessibility. Other input fields are wrapped in `<div>` elements for layout and styling, keeping the structure simple and maintainable. An outer `<fieldset>` is used solely for consistent visual grouping, without affecting semantic meaning.
@@ -566,43 +566,43 @@ All pages of the website have been tested using Google Lighthouse. The project a
 Index.html:
 
 <p align="center">
-<img src="/assets/images/lighthouse-index.png" alt="lighthouse scores homepage" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-index.png" alt="lighthouse scores homepage" width="400" heigh="auto"/>
 </p>
 
 Menu.html:
 
 <p align="center">
-<img src="/assets/images/lighthouse-menu.png" alt="lighthouse scores menu page" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-menu.png" alt="lighthouse scores menu page" width="400" heigh="auto"/>
 </p>
 
 About.html: 
 
 <p align="center">
-<img src="/assets/images/lighthouse-about.png" alt="lighthouse scores about page" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-about.png" alt="lighthouse scores about page" width="400" heigh="auto"/>
 </p>
 
 Contact.html: 
 
 <p align="center">
-<img src="/assets/images/lighthouse-contact.png" alt="lighthouse scores contactpage" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-contact.png" alt="lighthouse scores contactpage" width="400" heigh="auto"/>
 </p>
 
 Events.html:
 
 <p align="center">
-<img src="/assets/images/lighhouse-events.png" alt="lighthouse scores event page" width="400" heigh="auto"/>
+<img src="/documentation/lighhouse-events.png" alt="lighthouse scores event page" width="400" heigh="auto"/>
 </p>
 
 Reservations.html:
 
 <p align="center">
-<img src="/assets/images/lighthouse-reservations.png" alt="lighthouse scores reservation page" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-reservations.png" alt="lighthouse scores reservation page" width="400" heigh="auto"/>
 </p>
 
 Book.html:
 
 <p align="center">
-<img src="/assets/images/lighthouse-book.png" alt="lighthouse scores bookingpage" width="400" heigh="auto"/>
+<img src="/documentation/lighthouse-book.png" alt="lighthouse scores bookingpage" width="400" heigh="auto"/>
 </p>
 
 ### Cross-browser testing
