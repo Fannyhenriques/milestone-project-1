@@ -1,11 +1,2 @@
-# Node modules 
-node_modules/
-
-# Tailwind generated CSS
-/assets/style/tailwind-output.css
-
-# Lock-filer 
-package-lock.json
-
 # Mac-specific files
 .DS_Store
