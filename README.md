@@ -36,6 +36,7 @@ Hospitable is a fictional restaurant website designed to bring the dining experi
      - [Contact Page](#contact-page)
      - [Events Page](#events-page)
      - [Reservations / Booking Form](#reservation--booking---form-page)
+     - [Confirmation Page](#confirmation-page)
 4. [Technologies Used](#technologies-used)
    - [Languages](#languages)
    - [Frameworks](#frameworks)
@@ -403,8 +404,14 @@ This responsive adjustment provided a practical and accessible solution within t
 
 - The reservation form uses a `<fieldset>` with a `<legend>` for the radio button group to ensure semantic grouping and accessibility. Other input fields are wrapped in `<div>` elements for layout and styling, keeping the structure simple and maintainable. An outer `<fieldset>` is used solely for consistent visual grouping, without affecting semantic meaning.
 
----
+#### Confirmation Page
+- To provide visual feedback after submitting the booking form, a separate confirmation page (confirmation.html) was added. The page displays a confirmation message informing the user that their booking was successful and that a confirmation has been sent to their email. It also includes a button that allows the user to easily return to the homepage.
 
+<p align="center">
+<img src="/documentation/confirmationpage.png" alt="confirmation page screenshot" width="500" heigh="auto"/>
+</p>
+
+---
 ## Technologies Used
 
 ### Languages 
@@ -473,8 +480,6 @@ The live site can be found [here:](https://fannyhenriques.github.io/milestone-pr
 
 ### Booking & submit form
 * Currently, the booking form accepts all dates from 16/01/2026 onward because JavaScript is not implemented. This means users could technically select past dates. In the future, it would be ideal to add JavaScript to dynamically check the current date and restrict bookings to future dates only.
-* As this project is built using static HTML and CSS, the booking form does not process submissions in a realistic way, as this would require JavaScript or a backend solution. Currently, submitting the form simply refreshes the page.
-* From a user experience perspective, providing visual feedback after submission would improve usability. With more time, a separate confirmation page (e.g. confirmation.html) could be added to clearly inform users that their booking request has been sent.  
 
 ### Image Performance 
 * Some large images, especially the full-width hero image on the homepage, reduce the Lighthouse performance score. Future improvements could include resizing or using responsive image formats to improve load times while maintaining visual quality.
