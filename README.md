@@ -512,7 +512,7 @@ These elements were replaced with `<div>` where appropriate to better reflect th
 | **Page**              | **W3C HTML Validator Result** | **Link**                                                                                                                       |
 | --------------------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
 | Index.html            | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Findex.html)        |
-| Menu.html             | Fail                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fmenu.html)         |
+| Menu.html             | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fmenu.html)         |
 | About.html            | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fabout.html)        |
 | Contact.html          | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fcontact.html)      |
 | Events.html           | Pass                          | [Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Ffannyhenriques.github.io%2Fmilestone-project-1%2Fevents.html)       |
