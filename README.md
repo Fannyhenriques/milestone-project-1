@@ -617,7 +617,7 @@ The project was primarily tested on macOS (Safari, Chrome and Firefox), where no
 - To ensure consistent behavior across platforms, the header was changed to position: fixed, and compensating padding was added to the main element using custom CSS variables for different breakpoints.
 
 ### Known Bugs
-- 
+- Large images affecting performance: Some large images across the site, including the homepage hero image and image on the menu page, take longer to load and can lower Lighthouse performance scores. This is a known issue that could be optimized in the future by resizing images or using responsive formats to speed up loading without compromising the visual appearance.
 
 ---
 
